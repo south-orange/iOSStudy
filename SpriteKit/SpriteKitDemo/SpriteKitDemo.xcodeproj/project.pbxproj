@@ -7,34 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B78E886125DFC0B90077F44A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E886025DFC0B90077F44A /* AppDelegate.m */; };
-		B78E886325DFC0B90077F44A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B78E886225DFC0B90077F44A /* GameScene.sks */; };
-		B78E886525DFC0B90077F44A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B78E886425DFC0B90077F44A /* Actions.sks */; };
-		B78E886825DFC0B90077F44A /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E886725DFC0B90077F44A /* GameScene.m */; };
-		B78E886B25DFC0B90077F44A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E886A25DFC0B90077F44A /* GameViewController.m */; };
-		B78E886E25DFC0B90077F44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78E886C25DFC0B90077F44A /* Main.storyboard */; };
-		B78E887025DFC0BB0077F44A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B78E886F25DFC0BB0077F44A /* Assets.xcassets */; };
-		B78E887325DFC0BB0077F44A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E887225DFC0BB0077F44A /* main.m */; };
+		B78E889225DFD3510077F44A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E889125DFD3510077F44A /* AppDelegate.m */; };
+		B78E889825DFD3510077F44A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E889725DFD3510077F44A /* ViewController.m */; };
+		B78E889B25DFD3510077F44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78E889925DFD3510077F44A /* Main.storyboard */; };
+		B78E889D25DFD3540077F44A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B78E889C25DFD3540077F44A /* Assets.xcassets */; };
+		B78E88A025DFD3540077F44A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78E889E25DFD3540077F44A /* LaunchScreen.storyboard */; };
+		B78E88A325DFD3540077F44A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88A225DFD3540077F44A /* main.m */; };
+		B78E88AE25DFD4160077F44A /* HCScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88AD25DFD4160077F44A /* HCScene.m */; };
+		B78E88B225DFD4270077F44A /* HCView.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88B125DFD4270077F44A /* HCView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B78E885C25DFC0B90077F44A /* SpriteKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B78E885F25DFC0B90077F44A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B78E886025DFC0B90077F44A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B78E886225DFC0B90077F44A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		B78E886425DFC0B90077F44A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		B78E886625DFC0B90077F44A /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		B78E886725DFC0B90077F44A /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		B78E886925DFC0B90077F44A /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
-		B78E886A25DFC0B90077F44A /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		B78E886D25DFC0B90077F44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B78E886F25DFC0BB0077F44A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B78E887125DFC0BB0077F44A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B78E887225DFC0BB0077F44A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B78E888D25DFD3510077F44A /* SpriteKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B78E889025DFD3510077F44A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B78E889125DFD3510077F44A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B78E889625DFD3510077F44A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B78E889725DFD3510077F44A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B78E889A25DFD3510077F44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B78E889C25DFD3540077F44A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B78E889F25DFD3540077F44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B78E88A125DFD3540077F44A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B78E88A225DFD3540077F44A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B78E88AC25DFD4160077F44A /* HCScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCScene.h; sourceTree = "<group>"; };
+		B78E88AD25DFD4160077F44A /* HCScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCScene.m; sourceTree = "<group>"; };
+		B78E88B025DFD4270077F44A /* HCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCView.h; sourceTree = "<group>"; };
+		B78E88B125DFD4270077F44A /* HCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B78E885925DFC0B90077F44A /* Frameworks */ = {
+		B78E888A25DFD3510077F44A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,37 +45,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B78E885325DFC0B90077F44A = {
+		B78E888425DFD3510077F44A = {
 			isa = PBXGroup;
 			children = (
-				B78E885E25DFC0B90077F44A /* SpriteKitDemo */,
-				B78E885D25DFC0B90077F44A /* Products */,
+				B78E888F25DFD3510077F44A /* SpriteKitDemo */,
+				B78E888E25DFD3510077F44A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B78E885D25DFC0B90077F44A /* Products */ = {
+		B78E888E25DFD3510077F44A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B78E885C25DFC0B90077F44A /* SpriteKitDemo.app */,
+				B78E888D25DFD3510077F44A /* SpriteKitDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B78E885E25DFC0B90077F44A /* SpriteKitDemo */ = {
+		B78E888F25DFD3510077F44A /* SpriteKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				B78E885F25DFC0B90077F44A /* AppDelegate.h */,
-				B78E886025DFC0B90077F44A /* AppDelegate.m */,
-				B78E886225DFC0B90077F44A /* GameScene.sks */,
-				B78E886425DFC0B90077F44A /* Actions.sks */,
-				B78E886625DFC0B90077F44A /* GameScene.h */,
-				B78E886725DFC0B90077F44A /* GameScene.m */,
-				B78E886925DFC0B90077F44A /* GameViewController.h */,
-				B78E886A25DFC0B90077F44A /* GameViewController.m */,
-				B78E886C25DFC0B90077F44A /* Main.storyboard */,
-				B78E886F25DFC0BB0077F44A /* Assets.xcassets */,
-				B78E887125DFC0BB0077F44A /* Info.plist */,
-				B78E887225DFC0BB0077F44A /* main.m */,
+				B78E889025DFD3510077F44A /* AppDelegate.h */,
+				B78E889125DFD3510077F44A /* AppDelegate.m */,
+				B78E889625DFD3510077F44A /* ViewController.h */,
+				B78E889725DFD3510077F44A /* ViewController.m */,
+				B78E88AC25DFD4160077F44A /* HCScene.h */,
+				B78E88AD25DFD4160077F44A /* HCScene.m */,
+				B78E88B025DFD4270077F44A /* HCView.h */,
+				B78E88B125DFD4270077F44A /* HCView.m */,
+				B78E889925DFD3510077F44A /* Main.storyboard */,
+				B78E889C25DFD3540077F44A /* Assets.xcassets */,
+				B78E889E25DFD3540077F44A /* LaunchScreen.storyboard */,
+				B78E88A125DFD3540077F44A /* Info.plist */,
+				B78E88A225DFD3540077F44A /* main.m */,
 			);
 			path = SpriteKitDemo;
 			sourceTree = "<group>";
@@ -82,13 +84,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B78E885B25DFC0B90077F44A /* SpriteKitDemo */ = {
+		B78E888C25DFD3510077F44A /* SpriteKitDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B78E887625DFC0BB0077F44A /* Build configuration list for PBXNativeTarget "SpriteKitDemo" */;
+			buildConfigurationList = B78E88A625DFD3540077F44A /* Build configuration list for PBXNativeTarget "SpriteKitDemo" */;
 			buildPhases = (
-				B78E885825DFC0B90077F44A /* Sources */,
-				B78E885925DFC0B90077F44A /* Frameworks */,
-				B78E885A25DFC0B90077F44A /* Resources */,
+				B78E888925DFD3510077F44A /* Sources */,
+				B78E888A25DFD3510077F44A /* Frameworks */,
+				B78E888B25DFD3510077F44A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -96,23 +98,23 @@
 			);
 			name = SpriteKitDemo;
 			productName = SpriteKitDemo;
-			productReference = B78E885C25DFC0B90077F44A /* SpriteKitDemo.app */;
+			productReference = B78E888D25DFD3510077F44A /* SpriteKitDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B78E885425DFC0B90077F44A /* Project object */ = {
+		B78E888525DFD3510077F44A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					B78E885B25DFC0B90077F44A = {
+					B78E888C25DFD3510077F44A = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = B78E885725DFC0B90077F44A /* Build configuration list for PBXProject "SpriteKitDemo" */;
+			buildConfigurationList = B78E888825DFD3510077F44A /* Build configuration list for PBXProject "SpriteKitDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -120,57 +122,65 @@
 				en,
 				Base,
 			);
-			mainGroup = B78E885325DFC0B90077F44A;
-			productRefGroup = B78E885D25DFC0B90077F44A /* Products */;
+			mainGroup = B78E888425DFD3510077F44A;
+			productRefGroup = B78E888E25DFD3510077F44A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B78E885B25DFC0B90077F44A /* SpriteKitDemo */,
+				B78E888C25DFD3510077F44A /* SpriteKitDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B78E885A25DFC0B90077F44A /* Resources */ = {
+		B78E888B25DFD3510077F44A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B78E886E25DFC0B90077F44A /* Main.storyboard in Resources */,
-				B78E886325DFC0B90077F44A /* GameScene.sks in Resources */,
-				B78E887025DFC0BB0077F44A /* Assets.xcassets in Resources */,
-				B78E886525DFC0B90077F44A /* Actions.sks in Resources */,
+				B78E88A025DFD3540077F44A /* LaunchScreen.storyboard in Resources */,
+				B78E889D25DFD3540077F44A /* Assets.xcassets in Resources */,
+				B78E889B25DFD3510077F44A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B78E885825DFC0B90077F44A /* Sources */ = {
+		B78E888925DFD3510077F44A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B78E886825DFC0B90077F44A /* GameScene.m in Sources */,
-				B78E886B25DFC0B90077F44A /* GameViewController.m in Sources */,
-				B78E887325DFC0BB0077F44A /* main.m in Sources */,
-				B78E886125DFC0B90077F44A /* AppDelegate.m in Sources */,
+				B78E889825DFD3510077F44A /* ViewController.m in Sources */,
+				B78E88AE25DFD4160077F44A /* HCScene.m in Sources */,
+				B78E889225DFD3510077F44A /* AppDelegate.m in Sources */,
+				B78E88A325DFD3540077F44A /* main.m in Sources */,
+				B78E88B225DFD4270077F44A /* HCView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B78E886C25DFC0B90077F44A /* Main.storyboard */ = {
+		B78E889925DFD3510077F44A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B78E886D25DFC0B90077F44A /* Base */,
+				B78E889A25DFD3510077F44A /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B78E889E25DFD3540077F44A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B78E889F25DFD3540077F44A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B78E887425DFC0BB0077F44A /* Debug */ = {
+		B78E88A425DFD3540077F44A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -229,7 +239,7 @@
 			};
 			name = Debug;
 		};
-		B78E887525DFC0BB0077F44A /* Release */ = {
+		B78E88A525DFD3540077F44A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -282,7 +292,7 @@
 			};
 			name = Release;
 		};
-		B78E887725DFC0BB0077F44A /* Debug */ = {
+		B78E88A725DFD3540077F44A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -300,7 +310,7 @@
 			};
 			name = Debug;
 		};
-		B78E887825DFC0BB0077F44A /* Release */ = {
+		B78E88A825DFD3540077F44A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -321,25 +331,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B78E885725DFC0B90077F44A /* Build configuration list for PBXProject "SpriteKitDemo" */ = {
+		B78E888825DFD3510077F44A /* Build configuration list for PBXProject "SpriteKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B78E887425DFC0BB0077F44A /* Debug */,
-				B78E887525DFC0BB0077F44A /* Release */,
+				B78E88A425DFD3540077F44A /* Debug */,
+				B78E88A525DFD3540077F44A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B78E887625DFC0BB0077F44A /* Build configuration list for PBXNativeTarget "SpriteKitDemo" */ = {
+		B78E88A625DFD3540077F44A /* Build configuration list for PBXNativeTarget "SpriteKitDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B78E887725DFC0BB0077F44A /* Debug */,
-				B78E887825DFC0BB0077F44A /* Release */,
+				B78E88A725DFD3540077F44A /* Debug */,
+				B78E88A825DFD3540077F44A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B78E885425DFC0B90077F44A /* Project object */;
+	rootObject = B78E888525DFD3510077F44A /* Project object */;
 }
