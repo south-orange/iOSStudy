@@ -15,6 +15,10 @@
 		B78E88A325DFD3540077F44A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88A225DFD3540077F44A /* main.m */; };
 		B78E88AE25DFD4160077F44A /* HCScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88AD25DFD4160077F44A /* HCScene.m */; };
 		B78E88B225DFD4270077F44A /* HCView.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88B125DFD4270077F44A /* HCView.m */; };
+		B78E88BC25DFD7E10077F44A /* HCSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88BB25DFD7E10077F44A /* HCSimpleViewController.m */; };
+		B78E88CA25DFDB1F0077F44A /* HCGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88C825DFDB1E0077F44A /* HCGameViewController.m */; };
+		B78E88CB25DFDB1F0077F44A /* HCGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78E88C925DFDB1F0077F44A /* HCGameViewController.xib */; };
+		B78E88D025DFDBEF0077F44A /* HCGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88CF25DFDBEF0077F44A /* HCGameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,13 @@
 		B78E88AD25DFD4160077F44A /* HCScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCScene.m; sourceTree = "<group>"; };
 		B78E88B025DFD4270077F44A /* HCView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCView.h; sourceTree = "<group>"; };
 		B78E88B125DFD4270077F44A /* HCView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCView.m; sourceTree = "<group>"; };
+		B78E88BA25DFD7E10077F44A /* HCSimpleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSimpleViewController.h; sourceTree = "<group>"; };
+		B78E88BB25DFD7E10077F44A /* HCSimpleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSimpleViewController.m; sourceTree = "<group>"; };
+		B78E88C725DFDB1E0077F44A /* HCGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGameViewController.h; sourceTree = "<group>"; };
+		B78E88C825DFDB1E0077F44A /* HCGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGameViewController.m; sourceTree = "<group>"; };
+		B78E88C925DFDB1F0077F44A /* HCGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCGameViewController.xib; sourceTree = "<group>"; };
+		B78E88CE25DFDBEF0077F44A /* HCGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGameScene.h; sourceTree = "<group>"; };
+		B78E88CF25DFDBEF0077F44A /* HCGameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGameScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +75,12 @@
 		B78E888F25DFD3510077F44A /* SpriteKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B78E88BE25DFD81C0077F44A /* GameTest */,
+				B78E88B425DFD6D30077F44A /* simpleTest */,
 				B78E889025DFD3510077F44A /* AppDelegate.h */,
 				B78E889125DFD3510077F44A /* AppDelegate.m */,
 				B78E889625DFD3510077F44A /* ViewController.h */,
 				B78E889725DFD3510077F44A /* ViewController.m */,
-				B78E88AC25DFD4160077F44A /* HCScene.h */,
-				B78E88AD25DFD4160077F44A /* HCScene.m */,
-				B78E88B025DFD4270077F44A /* HCView.h */,
-				B78E88B125DFD4270077F44A /* HCView.m */,
 				B78E889925DFD3510077F44A /* Main.storyboard */,
 				B78E889C25DFD3540077F44A /* Assets.xcassets */,
 				B78E889E25DFD3540077F44A /* LaunchScreen.storyboard */,
@@ -79,6 +88,31 @@
 				B78E88A225DFD3540077F44A /* main.m */,
 			);
 			path = SpriteKitDemo;
+			sourceTree = "<group>";
+		};
+		B78E88B425DFD6D30077F44A /* simpleTest */ = {
+			isa = PBXGroup;
+			children = (
+				B78E88AC25DFD4160077F44A /* HCScene.h */,
+				B78E88AD25DFD4160077F44A /* HCScene.m */,
+				B78E88B025DFD4270077F44A /* HCView.h */,
+				B78E88B125DFD4270077F44A /* HCView.m */,
+				B78E88BA25DFD7E10077F44A /* HCSimpleViewController.h */,
+				B78E88BB25DFD7E10077F44A /* HCSimpleViewController.m */,
+			);
+			path = simpleTest;
+			sourceTree = "<group>";
+		};
+		B78E88BE25DFD81C0077F44A /* GameTest */ = {
+			isa = PBXGroup;
+			children = (
+				B78E88C725DFDB1E0077F44A /* HCGameViewController.h */,
+				B78E88C825DFDB1E0077F44A /* HCGameViewController.m */,
+				B78E88C925DFDB1F0077F44A /* HCGameViewController.xib */,
+				B78E88CE25DFDBEF0077F44A /* HCGameScene.h */,
+				B78E88CF25DFDBEF0077F44A /* HCGameScene.m */,
+			);
+			path = GameTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B78E88A025DFD3540077F44A /* LaunchScreen.storyboard in Resources */,
+				B78E88CB25DFDB1F0077F44A /* HCGameViewController.xib in Resources */,
 				B78E889D25DFD3540077F44A /* Assets.xcassets in Resources */,
 				B78E889B25DFD3510077F44A /* Main.storyboard in Resources */,
 			);
@@ -153,7 +188,10 @@
 				B78E889825DFD3510077F44A /* ViewController.m in Sources */,
 				B78E88AE25DFD4160077F44A /* HCScene.m in Sources */,
 				B78E889225DFD3510077F44A /* AppDelegate.m in Sources */,
+				B78E88D025DFDBEF0077F44A /* HCGameScene.m in Sources */,
 				B78E88A325DFD3540077F44A /* main.m in Sources */,
+				B78E88BC25DFD7E10077F44A /* HCSimpleViewController.m in Sources */,
+				B78E88CA25DFDB1F0077F44A /* HCGameViewController.m in Sources */,
 				B78E88B225DFD4270077F44A /* HCView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,8 +6,8 @@
 //
 
 #import "ViewController.h"
-#import <SpriteKit/SpriteKit.h>
-#import "HCView.h"
+#import "HCSimpleViewController.h"
+#import "HCGameViewController.h"
 
 @interface ViewController ()
 
@@ -18,8 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    HCView *view = [HCView.alloc initWithFrame:self.view.bounds];
-    [self.view addSubview:view];
+    //[self.view addSubview:HCSimpleViewController.new.view];
+    HCGameViewController *gameController = HCGameViewController.new;
+    gameController.view.frame = self.view.bounds;
+    [gameController configGame];
+    [self.view addSubview:gameController.view];
 }
 
 
