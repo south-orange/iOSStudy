@@ -15,7 +15,8 @@
 
 @implementation HCGameViewController
 
-- (void)configGame {
+- (void)viewDidLoad {
+    [super viewDidLoad];
     HCGameScene *gameScene = [HCGameScene.alloc initWithSize:self.view.bounds.size];
     SKView *skView = (SKView *)self.view;
     [skView presentScene:gameScene];

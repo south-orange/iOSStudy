@@ -19,6 +19,9 @@
 		B78E88CA25DFDB1F0077F44A /* HCGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88C825DFDB1E0077F44A /* HCGameViewController.m */; };
 		B78E88CB25DFDB1F0077F44A /* HCGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78E88C925DFDB1F0077F44A /* HCGameViewController.xib */; };
 		B78E88D025DFDBEF0077F44A /* HCGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88CF25DFDBEF0077F44A /* HCGameScene.m */; };
+		B78E88D625E0B7E30077F44A /* HCTriScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88D525E0B7E30077F44A /* HCTriScene.m */; };
+		B78E88DC25E0B7F70077F44A /* HCTriViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E88DA25E0B7F70077F44A /* HCTriViewController.m */; };
+		B78E88DD25E0B7F70077F44A /* HCTriViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B78E88DB25E0B7F70077F44A /* HCTriViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,11 @@
 		B78E88C925DFDB1F0077F44A /* HCGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCGameViewController.xib; sourceTree = "<group>"; };
 		B78E88CE25DFDBEF0077F44A /* HCGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGameScene.h; sourceTree = "<group>"; };
 		B78E88CF25DFDBEF0077F44A /* HCGameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGameScene.m; sourceTree = "<group>"; };
+		B78E88D425E0B7E30077F44A /* HCTriScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCTriScene.h; sourceTree = "<group>"; };
+		B78E88D525E0B7E30077F44A /* HCTriScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCTriScene.m; sourceTree = "<group>"; };
+		B78E88D925E0B7F70077F44A /* HCTriViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCTriViewController.h; sourceTree = "<group>"; };
+		B78E88DA25E0B7F70077F44A /* HCTriViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCTriViewController.m; sourceTree = "<group>"; };
+		B78E88DB25E0B7F70077F44A /* HCTriViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCTriViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 		B78E888F25DFD3510077F44A /* SpriteKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B78E88D325E0B7980077F44A /* TriTest */,
 				B78E88BE25DFD81C0077F44A /* GameTest */,
 				B78E88B425DFD6D30077F44A /* simpleTest */,
 				B78E889025DFD3510077F44A /* AppDelegate.h */,
@@ -113,6 +122,18 @@
 				B78E88CF25DFDBEF0077F44A /* HCGameScene.m */,
 			);
 			path = GameTest;
+			sourceTree = "<group>";
+		};
+		B78E88D325E0B7980077F44A /* TriTest */ = {
+			isa = PBXGroup;
+			children = (
+				B78E88D425E0B7E30077F44A /* HCTriScene.h */,
+				B78E88D525E0B7E30077F44A /* HCTriScene.m */,
+				B78E88D925E0B7F70077F44A /* HCTriViewController.h */,
+				B78E88DA25E0B7F70077F44A /* HCTriViewController.m */,
+				B78E88DB25E0B7F70077F44A /* HCTriViewController.xib */,
+			);
+			path = TriTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +194,7 @@
 			files = (
 				B78E88A025DFD3540077F44A /* LaunchScreen.storyboard in Resources */,
 				B78E88CB25DFDB1F0077F44A /* HCGameViewController.xib in Resources */,
+				B78E88DD25E0B7F70077F44A /* HCTriViewController.xib in Resources */,
 				B78E889D25DFD3540077F44A /* Assets.xcassets in Resources */,
 				B78E889B25DFD3510077F44A /* Main.storyboard in Resources */,
 			);
@@ -187,6 +209,8 @@
 			files = (
 				B78E889825DFD3510077F44A /* ViewController.m in Sources */,
 				B78E88AE25DFD4160077F44A /* HCScene.m in Sources */,
+				B78E88D625E0B7E30077F44A /* HCTriScene.m in Sources */,
+				B78E88DC25E0B7F70077F44A /* HCTriViewController.m in Sources */,
 				B78E889225DFD3510077F44A /* AppDelegate.m in Sources */,
 				B78E88D025DFDBEF0077F44A /* HCGameScene.m in Sources */,
 				B78E88A325DFD3540077F44A /* main.m in Sources */,
