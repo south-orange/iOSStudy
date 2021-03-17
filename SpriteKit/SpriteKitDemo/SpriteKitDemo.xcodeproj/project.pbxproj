@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7441A5E25E51F4500A12BAA /* HCSnakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7441A5C25E51F4500A12BAA /* HCSnakeViewController.m */; };
+		B7441A5F25E51F4500A12BAA /* HCSnakeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7441A5D25E51F4500A12BAA /* HCSnakeViewController.xib */; };
+		B7441A6425E5207900A12BAA /* HCSnakeScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B7441A6325E5207900A12BAA /* HCSnakeScene.m */; };
 		B78E889225DFD3510077F44A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E889125DFD3510077F44A /* AppDelegate.m */; };
 		B78E889825DFD3510077F44A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B78E889725DFD3510077F44A /* ViewController.m */; };
 		B78E889B25DFD3510077F44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B78E889925DFD3510077F44A /* Main.storyboard */; };
@@ -25,6 +28,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B7441A5B25E51F4500A12BAA /* HCSnakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeViewController.h; sourceTree = "<group>"; };
+		B7441A5C25E51F4500A12BAA /* HCSnakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeViewController.m; sourceTree = "<group>"; };
+		B7441A5D25E51F4500A12BAA /* HCSnakeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCSnakeViewController.xib; sourceTree = "<group>"; };
+		B7441A6225E5207900A12BAA /* HCSnakeScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeScene.h; sourceTree = "<group>"; };
+		B7441A6325E5207900A12BAA /* HCSnakeScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeScene.m; sourceTree = "<group>"; };
 		B78E888D25DFD3510077F44A /* SpriteKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78E889025DFD3510077F44A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B78E889125DFD3510077F44A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,6 +72,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7441A5A25E51C5600A12BAA /* SnakeTest */ = {
+			isa = PBXGroup;
+			children = (
+				B7441A5B25E51F4500A12BAA /* HCSnakeViewController.h */,
+				B7441A5C25E51F4500A12BAA /* HCSnakeViewController.m */,
+				B7441A5D25E51F4500A12BAA /* HCSnakeViewController.xib */,
+				B7441A6225E5207900A12BAA /* HCSnakeScene.h */,
+				B7441A6325E5207900A12BAA /* HCSnakeScene.m */,
+			);
+			path = SnakeTest;
+			sourceTree = "<group>";
+		};
 		B78E888425DFD3510077F44A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +103,7 @@
 		B78E888F25DFD3510077F44A /* SpriteKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B7441A5A25E51C5600A12BAA /* SnakeTest */,
 				B78E88D325E0B7980077F44A /* TriTest */,
 				B78E88BE25DFD81C0077F44A /* GameTest */,
 				B78E88B425DFD6D30077F44A /* simpleTest */,
@@ -194,6 +215,7 @@
 			files = (
 				B78E88A025DFD3540077F44A /* LaunchScreen.storyboard in Resources */,
 				B78E88CB25DFDB1F0077F44A /* HCGameViewController.xib in Resources */,
+				B7441A5F25E51F4500A12BAA /* HCSnakeViewController.xib in Resources */,
 				B78E88DD25E0B7F70077F44A /* HCTriViewController.xib in Resources */,
 				B78E889D25DFD3540077F44A /* Assets.xcassets in Resources */,
 				B78E889B25DFD3510077F44A /* Main.storyboard in Resources */,
@@ -207,7 +229,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7441A6425E5207900A12BAA /* HCSnakeScene.m in Sources */,
 				B78E889825DFD3510077F44A /* ViewController.m in Sources */,
+				B7441A5E25E51F4500A12BAA /* HCSnakeViewController.m in Sources */,
 				B78E88AE25DFD4160077F44A /* HCScene.m in Sources */,
 				B78E88D625E0B7E30077F44A /* HCTriScene.m in Sources */,
 				B78E88DC25E0B7F70077F44A /* HCTriViewController.m in Sources */,
@@ -293,7 +317,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -346,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

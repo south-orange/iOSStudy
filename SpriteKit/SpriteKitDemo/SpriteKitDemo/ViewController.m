@@ -9,6 +9,7 @@
 #import "HCSimpleViewController.h"
 #import "HCGameViewController.h"
 #import "HCTriViewController.h"
+#import "HCSnakeViewController.h"
 
 @interface ViewController ()
 
@@ -27,9 +28,14 @@
 //    [gameController configGame];
 //    [self.view addSubview:gameController.view];
     
-    HCTriViewController *triController = HCTriViewController.new;
-    triController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 50);
-    [self.view addSubview:triController.view];
+//    HCTriViewController *triController = HCTriViewController.new;
+//    triController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 50);
+//    [self.view addSubview:triController.view];
+    
+    HCSnakeViewController *snakeController = HCSnakeViewController.new;
+    snakeController.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height - 50);
+    [snakeController configScene];
+    [self.view addSubview:snakeController.view];
 }
 
 
