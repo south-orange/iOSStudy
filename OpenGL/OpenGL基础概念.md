@@ -180,6 +180,7 @@ varying vec2 varyTextCoord;//varying变量，传入一个二维向量，包含�
 void main() {//着色器的入口函数
     gl_FragColor = texture2D(colorMap, varyTextCoord);//设置输出颜色gl_FragColor的值，由纹理的色彩和纹理坐标构成
 }
+
 ```
 ##### 编译着色器
 
