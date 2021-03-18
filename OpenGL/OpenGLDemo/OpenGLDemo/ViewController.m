@@ -18,11 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    HCGLKView01 *glkView = [HCGLKView01.alloc initWithFrame:self.view.frame];
-//    [self.view addSubview:glkView];
-    HCGLKView02 *glkView = [HCGLKView02.alloc initWithFrame:self.view.frame];
+    HCGLKView01 *glkView = [HCGLKView01.alloc initWithFrame:self.view.frame];
     [self.view addSubview:glkView];
-    [glkView display];
+//    HCGLKView02 *glkView = [HCGLKView02.alloc initWithFrame:self.view.frame];
+//    [self.view addSubview:glkView];
+//    [glkView display];
 }
 
 
