@@ -57,6 +57,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B75CD2F62603446F00AEE498 /* snake */ = {
+			isa = PBXGroup;
+			children = (
+				B75CD2F72603447C00AEE498 /* Manager */,
+			);
+			path = snake;
+			sourceTree = "<group>";
+		};
+		B75CD2F72603447C00AEE498 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		B7A52E0125FF388C00EF8BC2 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +94,7 @@
 			children = (
 				B7A52FAA2600859400EF8BC2 /* OpenGLDemo.entitlements */,
 				B7A53144260227B500EF8BC2 /* study */,
+				B75CD2F62603446F00AEE498 /* snake */,
 				B7A52E0D25FF388C00EF8BC2 /* AppDelegate.h */,
 				B7A52E0E25FF388C00EF8BC2 /* AppDelegate.m */,
 				B7A52E1325FF388C00EF8BC2 /* ViewController.h */,

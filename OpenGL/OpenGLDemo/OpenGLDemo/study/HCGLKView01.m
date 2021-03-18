@@ -182,7 +182,7 @@
     //绑定缓存
     glBindBuffer(GL_ARRAY_BUFFER, attrBuffer);
     //将数据存入缓存
-    glBufferData(GL_ARRAY_BUFFER, sizeof(attrArray), attrArray, GL_DYNAMIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(attrArray), attrArray, GL_STATIC_DRAW);
     
     //获取position变量
     GLuint position = glGetAttribLocation(self.program, "position");
