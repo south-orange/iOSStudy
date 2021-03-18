@@ -12,6 +12,7 @@ GLSL(OpenGL着色语言OpenGL Shading Language)语法跟C语言很类似，在�
 - float
 - vec2,vec3,vec4,bvec2,bvec3,bvec4,ivec2,ivec3,ivec4
 - mat2,mat3,mat4
+  <font color="red">OpenGL中矩阵是列主序的，需要自己做一次转置操作</font>
 - sampler1D,sampler2D,sampler3D,samplerCube
   sameler表示纹理采样器，sampler2D表示二维纹理采样器，samplerCube表示立方体地图纹理采样器
 

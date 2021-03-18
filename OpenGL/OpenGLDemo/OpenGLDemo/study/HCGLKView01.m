@@ -182,7 +182,7 @@
     //绑定缓存
     glBindBuffer(GL_ARRAY_BUFFER, attrBuffer);
     //将数据存入缓存
-    glBufferData(GL_ARRAY_BUFFER, sizeof(attrArray), attrArray, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(attrArray), attrArray, GL_DYNAMIC_DRAW);
     
     //获取position变量
     GLuint position = glGetAttribLocation(self.program, "position");
@@ -194,6 +194,20 @@
     GLuint textCoor = glGetAttribLocation(self.program, "textCoordinate");
     glVertexAttribPointer(textCoor, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 5, (GLfloat *)NULL + 3);
     glEnableVertexAttribArray(textCoor);
+    
+    GLuint rotate = glGetUniformLocation(self.program, "rotateMatrix");
+    
+    float radians = 0 * M_PI / 180;
+    float s = sin(radians);
+    float c = cos(radians);
+    
+    GLfloat zRotation[16] = {
+        c, -s, 0, 0,
+        s, c, 0, 0,
+        0, 0, 1.0, 0,
+        0, 0, 0, 1.0,
+    };
+    glUniformMatrix4fv(rotate, 1, GL_FALSE, (GLfloat *)&zRotation[0]);
     
     GLuint textureID = [self setupTexture];
     GLuint colorMap = glGetUniformLocation(self.program, "colorMap");
