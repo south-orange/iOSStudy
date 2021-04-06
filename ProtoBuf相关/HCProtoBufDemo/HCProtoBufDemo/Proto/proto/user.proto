@@ -1,0 +1,12 @@
+syntax = "proto3";
+package user;
+
+option go_package = "proto/user";
+
+message User{
+    optional int32 id = 1;
+    optional string username = 2;
+    optional string age = 3;
+    optional string gender = 4;
+    optional string imageurl = 5;
+}

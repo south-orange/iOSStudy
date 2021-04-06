@@ -1,0 +1,6 @@
+framework module Pods_HCProtoBufDemo {
+  umbrella header "Pods-HCProtoBufDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
