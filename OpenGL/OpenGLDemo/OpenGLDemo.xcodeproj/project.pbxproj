@@ -3,10 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242A551616658A0157C58841 /* Pods_OpenGLDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B7F3775B71BF33D6D45A6F4 /* Pods_OpenGLDemo.framework */; };
+		B714C535266772E200C39B75 /* HCSnakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B714C534266772E200C39B75 /* HCSnakeViewController.m */; };
+		B714C5382667836F00C39B75 /* HCJoyStickView.m in Sources */ = {isa = PBXBuildFile; fileRef = B714C5372667836F00C39B75 /* HCJoyStickView.m */; };
+		B717800626806D0600121642 /* HCSnakeRender.m in Sources */ = {isa = PBXBuildFile; fileRef = B717800526806D0600121642 /* HCSnakeRender.m */; };
+		B717800926806D8500121642 /* HCRenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B717800826806D8500121642 /* HCRenderManager.m */; };
+		B717800C26806EC900121642 /* HCBaseRender.m in Sources */ = {isa = PBXBuildFile; fileRef = B717800B26806EC900121642 /* HCBaseRender.m */; };
+		B7178012268081AD00121642 /* HCSnakeSkinCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B7178011268081AD00121642 /* HCSnakeSkinCollection.m */; };
+		B7190B282679D4E1007872CC /* HCMapDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190B272679D4E1007872CC /* HCMapDataManger.m */; };
+		B7190B2C2679DD90007872CC /* HCMapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190B2B2679DD90007872CC /* HCMapNode.m */; };
+		B7190B2F267A1853007872CC /* HCSnakeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190B2E267A1853007872CC /* HCSnakeNode.m */; };
+		B7190D51267C956D007872CC /* HCGLSnakeDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190D50267C956D007872CC /* HCGLSnakeDrawer.m */; };
+		B75FAA7B265B893600D80312 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75FAA7A265B893600D80312 /* UIKit.framework */; };
+		B75FAA89265CE90000D80312 /* HCGLDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FAA88265CE90000D80312 /* HCGLDrawer.m */; };
+		B75FAA8C265CEA0F00D80312 /* HCGLTextureProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FAA8B265CEA0F00D80312 /* HCGLTextureProgram.m */; };
+		B75FAB98265DF31600D80312 /* HCGLTextureShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = B75FAB97265DF31600D80312 /* HCGLTextureShader.vsh */; };
+		B75FAB9A265DF31C00D80312 /* HCGLTextureShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = B75FAB99265DF31C00D80312 /* HCGLTextureShader.fsh */; };
+		B75FAB9D265DF6C100D80312 /* HCGLTextureDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FAB9C265DF6C100D80312 /* HCGLTextureDrawer.m */; };
+		B75FABA1265E23A000D80312 /* HCCircularQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FABA0265E23A000D80312 /* HCCircularQueue.m */; };
+		B75FABA5265E71A100D80312 /* HCGLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FABA4265E71A100D80312 /* HCGLNode.m */; };
+		B75FABA8265F3B6000D80312 /* HCLinkList.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FABA7265F3B6000D80312 /* HCLinkList.m */; };
+		B75FABAC265F8DA200D80312 /* HCSnakeDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FABAB265F8DA200D80312 /* HCSnakeDataManager.m */; };
+		B75FABAF265F907D00D80312 /* HCGLColorNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FABAE265F907D00D80312 /* HCGLColorNode.m */; };
+		B75FABB2265F966A00D80312 /* HCGLTextureNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FABB1265F966A00D80312 /* HCGLTextureNode.m */; };
+		B75FABB6265F96A400D80312 /* HCGLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FABB5265F96A400D80312 /* HCGLTexture.m */; };
+		B7823DC0265B49250051509F /* HCGLBaseProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = B7823DBF265B49250051509F /* HCGLBaseProgram.m */; };
+		B7823DC3265B51320051509F /* HCGLColorProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = B7823DC2265B51320051509F /* HCGLColorProgram.m */; };
+		B7823DC5265B58AD0051509F /* HCGLColorShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = B7823DC4265B58AD0051509F /* HCGLColorShader.vsh */; };
+		B7823DC7265B58C00051509F /* HCGLColorShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = B7823DC6265B58C00051509F /* HCGLColorShader.fsh */; };
+		B7823DCB265B5E650051509F /* HCSnakeGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7823DCA265B5E650051509F /* HCSnakeGLKView.m */; };
 		B7A52E0F25FF388C00EF8BC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A52E0E25FF388C00EF8BC2 /* AppDelegate.m */; };
 		B7A52E1525FF388C00EF8BC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A52E1425FF388C00EF8BC2 /* ViewController.m */; };
 		B7A52E1825FF388C00EF8BC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A52E1625FF388C00EF8BC2 /* Main.storyboard */; };
@@ -18,11 +47,70 @@
 		B7A52FA82600508D00EF8BC2 /* HCGLKView01.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A52FA72600508D00EF8BC2 /* HCGLKView01.m */; };
 		B7A52FAE260085DE00EF8BC2 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A52FAD260085DE00EF8BC2 /* GameController.framework */; };
 		B7A52FB52600C8D200EF8BC2 /* HCGLKView02.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A52FB42600C8D200EF8BC2 /* HCGLKView02.m */; };
-		B7A52FB82600CFCB00EF8BC2 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A52FB72600CFCB00EF8BC2 /* player.png */; };
-		B7A52FBB2600CFD600EF8BC2 /* body.png in Resources */ = {isa = PBXBuildFile; fileRef = B7A52FBA2600CFD600EF8BC2 /* body.png */; };
+		B7C3123C2664945A00F3F54A /* HCGLTextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C3123B2664945A00F3F54A /* HCGLTextureManager.m */; };
+		B7C3123F2664B84300F3F54A /* HCGLBgDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C3123E2664B84300F3F54A /* HCGLBgDrawer.m */; };
+		B7D9BD92267897A50063F572 /* HCGameSnake.m in Sources */ = {isa = PBXBuildFile; fileRef = B7D9BD91267897A50063F572 /* HCGameSnake.m */; };
+		B7D9BD9726789ABE0063F572 /* MathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7D9BD9626789ABE0063F572 /* MathUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03E19F3B4A52E6DA552A3027 /* Pods-OpenGLDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenGLDemo.debug.xcconfig"; path = "Target Support Files/Pods-OpenGLDemo/Pods-OpenGLDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		0B7F3775B71BF33D6D45A6F4 /* Pods_OpenGLDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenGLDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5441E03FA5C453A0F110753D /* Pods-OpenGLDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenGLDemo.release.xcconfig"; path = "Target Support Files/Pods-OpenGLDemo/Pods-OpenGLDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B714C533266772E200C39B75 /* HCSnakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeViewController.h; sourceTree = "<group>"; };
+		B714C534266772E200C39B75 /* HCSnakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeViewController.m; sourceTree = "<group>"; };
+		B714C5362667836F00C39B75 /* HCJoyStickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCJoyStickView.h; sourceTree = "<group>"; };
+		B714C5372667836F00C39B75 /* HCJoyStickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCJoyStickView.m; sourceTree = "<group>"; };
+		B717800426806D0600121642 /* HCSnakeRender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeRender.h; sourceTree = "<group>"; };
+		B717800526806D0600121642 /* HCSnakeRender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeRender.m; sourceTree = "<group>"; };
+		B717800726806D8500121642 /* HCRenderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCRenderManager.h; sourceTree = "<group>"; };
+		B717800826806D8500121642 /* HCRenderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCRenderManager.m; sourceTree = "<group>"; };
+		B717800A26806EC900121642 /* HCBaseRender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBaseRender.h; sourceTree = "<group>"; };
+		B717800B26806EC900121642 /* HCBaseRender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBaseRender.m; sourceTree = "<group>"; };
+		B7178010268081AD00121642 /* HCSnakeSkinCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeSkinCollection.h; sourceTree = "<group>"; };
+		B7178011268081AD00121642 /* HCSnakeSkinCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeSkinCollection.m; sourceTree = "<group>"; };
+		B7190B262679D4E1007872CC /* HCMapDataManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMapDataManger.h; sourceTree = "<group>"; };
+		B7190B272679D4E1007872CC /* HCMapDataManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMapDataManger.m; sourceTree = "<group>"; };
+		B7190B2A2679DD90007872CC /* HCMapNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMapNode.h; sourceTree = "<group>"; };
+		B7190B2B2679DD90007872CC /* HCMapNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMapNode.m; sourceTree = "<group>"; };
+		B7190B2D267A1853007872CC /* HCSnakeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeNode.h; sourceTree = "<group>"; };
+		B7190B2E267A1853007872CC /* HCSnakeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeNode.m; sourceTree = "<group>"; };
+		B7190D4F267C956D007872CC /* HCGLSnakeDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLSnakeDrawer.h; sourceTree = "<group>"; };
+		B7190D50267C956D007872CC /* HCGLSnakeDrawer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLSnakeDrawer.m; sourceTree = "<group>"; };
+		B75FAA7A265B893600D80312 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B75FAA87265CE90000D80312 /* HCGLDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLDrawer.h; sourceTree = "<group>"; };
+		B75FAA88265CE90000D80312 /* HCGLDrawer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLDrawer.m; sourceTree = "<group>"; };
+		B75FAA8A265CEA0F00D80312 /* HCGLTextureProgram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLTextureProgram.h; sourceTree = "<group>"; };
+		B75FAA8B265CEA0F00D80312 /* HCGLTextureProgram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLTextureProgram.m; sourceTree = "<group>"; };
+		B75FAB97265DF31600D80312 /* HCGLTextureShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = HCGLTextureShader.vsh; sourceTree = "<group>"; };
+		B75FAB99265DF31C00D80312 /* HCGLTextureShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = HCGLTextureShader.fsh; sourceTree = "<group>"; };
+		B75FAB9B265DF6C100D80312 /* HCGLTextureDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLTextureDrawer.h; sourceTree = "<group>"; };
+		B75FAB9C265DF6C100D80312 /* HCGLTextureDrawer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLTextureDrawer.m; sourceTree = "<group>"; };
+		B75FAB9F265E23A000D80312 /* HCCircularQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCircularQueue.h; sourceTree = "<group>"; };
+		B75FABA0265E23A000D80312 /* HCCircularQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCircularQueue.m; sourceTree = "<group>"; };
+		B75FABA3265E71A100D80312 /* HCGLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLNode.h; sourceTree = "<group>"; };
+		B75FABA4265E71A100D80312 /* HCGLNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLNode.m; sourceTree = "<group>"; };
+		B75FABA6265F3B6000D80312 /* HCLinkList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCLinkList.h; sourceTree = "<group>"; };
+		B75FABA7265F3B6000D80312 /* HCLinkList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCLinkList.m; sourceTree = "<group>"; };
+		B75FABAA265F8DA200D80312 /* HCSnakeDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeDataManager.h; sourceTree = "<group>"; };
+		B75FABAB265F8DA200D80312 /* HCSnakeDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeDataManager.m; sourceTree = "<group>"; };
+		B75FABAD265F907D00D80312 /* HCGLColorNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLColorNode.h; sourceTree = "<group>"; };
+		B75FABAE265F907D00D80312 /* HCGLColorNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLColorNode.m; sourceTree = "<group>"; };
+		B75FABB0265F966A00D80312 /* HCGLTextureNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLTextureNode.h; sourceTree = "<group>"; };
+		B75FABB1265F966A00D80312 /* HCGLTextureNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLTextureNode.m; sourceTree = "<group>"; };
+		B75FABB4265F96A400D80312 /* HCGLTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLTexture.h; sourceTree = "<group>"; };
+		B75FABB5265F96A400D80312 /* HCGLTexture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLTexture.m; sourceTree = "<group>"; };
+		B75FABB7265F9FA600D80312 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B75FABB9265F9FEB00D80312 /* HCMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMacro.h; sourceTree = "<group>"; };
+		B7823DBE265B49250051509F /* HCGLBaseProgram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLBaseProgram.h; sourceTree = "<group>"; };
+		B7823DBF265B49250051509F /* HCGLBaseProgram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLBaseProgram.m; sourceTree = "<group>"; };
+		B7823DC1265B51320051509F /* HCGLColorProgram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLColorProgram.h; sourceTree = "<group>"; };
+		B7823DC2265B51320051509F /* HCGLColorProgram.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLColorProgram.m; sourceTree = "<group>"; };
+		B7823DC4265B58AD0051509F /* HCGLColorShader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = HCGLColorShader.vsh; sourceTree = "<group>"; };
+		B7823DC6265B58C00051509F /* HCGLColorShader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = HCGLColorShader.fsh; sourceTree = "<group>"; };
+		B7823DC9265B5E650051509F /* HCSnakeGLKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeGLKView.h; sourceTree = "<group>"; };
+		B7823DCA265B5E650051509F /* HCSnakeGLKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeGLKView.m; sourceTree = "<group>"; };
+		B7823DCC265B7E360051509F /* HCGLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLHeader.h; sourceTree = "<group>"; };
 		B7A52E0A25FF388C00EF8BC2 /* OpenGLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGLDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A52E0D25FF388C00EF8BC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B7A52E0E25FF388C00EF8BC2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,8 +129,15 @@
 		B7A52FAD260085DE00EF8BC2 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
 		B7A52FB32600C8D200EF8BC2 /* HCGLKView02.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLKView02.h; sourceTree = "<group>"; };
 		B7A52FB42600C8D200EF8BC2 /* HCGLKView02.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLKView02.m; sourceTree = "<group>"; };
-		B7A52FB72600CFCB00EF8BC2 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = player.png; path = Assets.xcassets/head.imageset/player.png; sourceTree = "<group>"; };
-		B7A52FBA2600CFD600EF8BC2 /* body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = body.png; path = Assets.xcassets/body.imageset/body.png; sourceTree = "<group>"; };
+		B7C3123A2664945A00F3F54A /* HCGLTextureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLTextureManager.h; sourceTree = "<group>"; };
+		B7C3123B2664945A00F3F54A /* HCGLTextureManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLTextureManager.m; sourceTree = "<group>"; };
+		B7C3123D2664B84300F3F54A /* HCGLBgDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLBgDrawer.h; sourceTree = "<group>"; };
+		B7C3123E2664B84300F3F54A /* HCGLBgDrawer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLBgDrawer.m; sourceTree = "<group>"; };
+		B7D9BD90267897A50063F572 /* HCGameSnake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGameSnake.h; sourceTree = "<group>"; };
+		B7D9BD91267897A50063F572 /* HCGameSnake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGameSnake.m; sourceTree = "<group>"; };
+		B7D9BD9326789A4F0063F572 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		B7D9BD9526789ABE0063F572 /* MathUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathUtils.h; sourceTree = "<group>"; };
+		B7D9BD9626789ABE0063F572 /* MathUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,26 +145,168 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75FAA7B265B893600D80312 /* UIKit.framework in Frameworks */,
 				B7A52FAE260085DE00EF8BC2 /* GameController.framework in Frameworks */,
+				242A551616658A0157C58841 /* Pods_OpenGLDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FF81DDE621BA80A2415C90F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03E19F3B4A52E6DA552A3027 /* Pods-OpenGLDemo.debug.xcconfig */,
+				5441E03FA5C453A0F110753D /* Pods-OpenGLDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B7104E8726857CC200F39FE0 /* EventHandler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EventHandler;
+			sourceTree = "<group>";
+		};
+		B717800326806CE600121642 /* Render */ = {
+			isa = PBXGroup;
+			children = (
+				B717800726806D8500121642 /* HCRenderManager.h */,
+				B717800826806D8500121642 /* HCRenderManager.m */,
+				B717800A26806EC900121642 /* HCBaseRender.h */,
+				B717800B26806EC900121642 /* HCBaseRender.m */,
+				B717800426806D0600121642 /* HCSnakeRender.h */,
+				B717800526806D0600121642 /* HCSnakeRender.m */,
+			);
+			path = Render;
+			sourceTree = "<group>";
+		};
+		B7190B292679DD68007872CC /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				B7190B2A2679DD90007872CC /* HCMapNode.h */,
+				B7190B2B2679DD90007872CC /* HCMapNode.m */,
+				B7190B2D267A1853007872CC /* HCSnakeNode.h */,
+				B7190B2E267A1853007872CC /* HCSnakeNode.m */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
 		B75CD2F62603446F00AEE498 /* snake */ = {
 			isa = PBXGroup;
 			children = (
-				B75CD2F72603447C00AEE498 /* Manager */,
+				B7D9BD9426789A9B0063F572 /* Utils */,
+				B75FAB9E265E234600D80312 /* DataStructure */,
+				B7823DC8265B5E330051509F /* GL */,
+				B717800326806CE600121642 /* Render */,
+				B75FABA9265F8D8D00D80312 /* Data */,
+				B714C533266772E200C39B75 /* HCSnakeViewController.h */,
+				B714C534266772E200C39B75 /* HCSnakeViewController.m */,
+				B714C5362667836F00C39B75 /* HCJoyStickView.h */,
+				B714C5372667836F00C39B75 /* HCJoyStickView.m */,
 			);
 			path = snake;
 			sourceTree = "<group>";
 		};
-		B75CD2F72603447C00AEE498 /* Manager */ = {
+		B75FAA86265CE8AD00D80312 /* Drawer */ = {
 			isa = PBXGroup;
 			children = (
+				B75FAA87265CE90000D80312 /* HCGLDrawer.h */,
+				B75FAA88265CE90000D80312 /* HCGLDrawer.m */,
+				B75FAB9B265DF6C100D80312 /* HCGLTextureDrawer.h */,
+				B75FAB9C265DF6C100D80312 /* HCGLTextureDrawer.m */,
+				B7C3123D2664B84300F3F54A /* HCGLBgDrawer.h */,
+				B7C3123E2664B84300F3F54A /* HCGLBgDrawer.m */,
+				B7190D4F267C956D007872CC /* HCGLSnakeDrawer.h */,
+				B7190D50267C956D007872CC /* HCGLSnakeDrawer.m */,
 			);
-			path = Manager;
+			path = Drawer;
+			sourceTree = "<group>";
+		};
+		B75FAB9E265E234600D80312 /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				B75FAB9F265E23A000D80312 /* HCCircularQueue.h */,
+				B75FABA0265E23A000D80312 /* HCCircularQueue.m */,
+				B75FABA6265F3B6000D80312 /* HCLinkList.h */,
+				B75FABA7265F3B6000D80312 /* HCLinkList.m */,
+			);
+			path = DataStructure;
+			sourceTree = "<group>";
+		};
+		B75FABA2265E705D00D80312 /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				B75FABA3265E71A100D80312 /* HCGLNode.h */,
+				B75FABA4265E71A100D80312 /* HCGLNode.m */,
+				B75FABAD265F907D00D80312 /* HCGLColorNode.h */,
+				B75FABAE265F907D00D80312 /* HCGLColorNode.m */,
+				B75FABB0265F966A00D80312 /* HCGLTextureNode.h */,
+				B75FABB1265F966A00D80312 /* HCGLTextureNode.m */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		B75FABA9265F8D8D00D80312 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B7104E8726857CC200F39FE0 /* EventHandler */,
+				B7190B292679DD68007872CC /* Node */,
+				B7D9BD9326789A4F0063F572 /* GameConfig.h */,
+				B75FABAA265F8DA200D80312 /* HCSnakeDataManager.h */,
+				B75FABAB265F8DA200D80312 /* HCSnakeDataManager.m */,
+				B7190B262679D4E1007872CC /* HCMapDataManger.h */,
+				B7190B272679D4E1007872CC /* HCMapDataManger.m */,
+				B7D9BD90267897A50063F572 /* HCGameSnake.h */,
+				B7D9BD91267897A50063F572 /* HCGameSnake.m */,
+				B7178010268081AD00121642 /* HCSnakeSkinCollection.h */,
+				B7178011268081AD00121642 /* HCSnakeSkinCollection.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B75FABB3265F967F00D80312 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				B75FABB4265F96A400D80312 /* HCGLTexture.h */,
+				B75FABB5265F96A400D80312 /* HCGLTexture.m */,
+				B7C3123A2664945A00F3F54A /* HCGLTextureManager.h */,
+				B7C3123B2664945A00F3F54A /* HCGLTextureManager.m */,
+			);
+			path = Texture;
+			sourceTree = "<group>";
+		};
+		B7823DBD265B48F80051509F /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				B7823DBE265B49250051509F /* HCGLBaseProgram.h */,
+				B7823DBF265B49250051509F /* HCGLBaseProgram.m */,
+				B7823DC1265B51320051509F /* HCGLColorProgram.h */,
+				B7823DC2265B51320051509F /* HCGLColorProgram.m */,
+				B7823DC4265B58AD0051509F /* HCGLColorShader.vsh */,
+				B7823DC6265B58C00051509F /* HCGLColorShader.fsh */,
+				B75FAA8A265CEA0F00D80312 /* HCGLTextureProgram.h */,
+				B75FAA8B265CEA0F00D80312 /* HCGLTextureProgram.m */,
+				B75FAB97265DF31600D80312 /* HCGLTextureShader.vsh */,
+				B75FAB99265DF31C00D80312 /* HCGLTextureShader.fsh */,
+			);
+			path = Program;
+			sourceTree = "<group>";
+		};
+		B7823DC8265B5E330051509F /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				B7823DCC265B7E360051509F /* HCGLHeader.h */,
+				B7823DC9265B5E650051509F /* HCSnakeGLKView.h */,
+				B7823DCA265B5E650051509F /* HCSnakeGLKView.m */,
+				B75FABA2265E705D00D80312 /* Node */,
+				B75FAA86265CE8AD00D80312 /* Drawer */,
+				B75FABB3265F967F00D80312 /* Texture */,
+				B7823DBD265B48F80051509F /* Program */,
+			);
+			path = GL;
 			sourceTree = "<group>";
 		};
 		B7A52E0125FF388C00EF8BC2 = {
@@ -78,6 +315,7 @@
 				B7A52E0C25FF388C00EF8BC2 /* OpenGLDemo */,
 				B7A52E0B25FF388C00EF8BC2 /* Products */,
 				B7A52FAC260085DE00EF8BC2 /* Frameworks */,
+				3FF81DDE621BA80A2415C90F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +337,13 @@
 				B7A52E0E25FF388C00EF8BC2 /* AppDelegate.m */,
 				B7A52E1325FF388C00EF8BC2 /* ViewController.h */,
 				B7A52E1425FF388C00EF8BC2 /* ViewController.m */,
-				B7A52FB72600CFCB00EF8BC2 /* player.png */,
-				B7A52FBA2600CFD600EF8BC2 /* body.png */,
 				B7A52E1625FF388C00EF8BC2 /* Main.storyboard */,
 				B7A52E1925FF388E00EF8BC2 /* Assets.xcassets */,
 				B7A52E1B25FF388E00EF8BC2 /* LaunchScreen.storyboard */,
 				B7A52E1E25FF388E00EF8BC2 /* Info.plist */,
 				B7A52E1F25FF388E00EF8BC2 /* main.m */,
+				B75FABB7265F9FA600D80312 /* PrefixHeader.pch */,
+				B75FABB9265F9FEB00D80312 /* HCMacro.h */,
 			);
 			path = OpenGLDemo;
 			sourceTree = "<group>";
@@ -113,7 +351,9 @@
 		B7A52FAC260085DE00EF8BC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B75FAA7A265B893600D80312 /* UIKit.framework */,
 				B7A52FAD260085DE00EF8BC2 /* GameController.framework */,
+				0B7F3775B71BF33D6D45A6F4 /* Pods_OpenGLDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -131,6 +371,15 @@
 			path = study;
 			sourceTree = "<group>";
 		};
+		B7D9BD9426789A9B0063F572 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B7D9BD9526789ABE0063F572 /* MathUtils.h */,
+				B7D9BD9626789ABE0063F572 /* MathUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +387,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7A52E2325FF388E00EF8BC2 /* Build configuration list for PBXNativeTarget "OpenGLDemo" */;
 			buildPhases = (
+				945EEDA4A955F5DB9DD297DE /* [CP] Check Pods Manifest.lock */,
 				B7A52E0625FF388C00EF8BC2 /* Sources */,
 				B7A52E0725FF388C00EF8BC2 /* Frameworks */,
 				B7A52E0825FF388C00EF8BC2 /* Resources */,
+				C7746DA0E525FE8C1BC0684B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,15 +440,59 @@
 			files = (
 				B7A52F9625FF506700EF8BC2 /* Shader.vsh in Resources */,
 				B7A52E1D25FF388E00EF8BC2 /* LaunchScreen.storyboard in Resources */,
-				B7A52FB82600CFCB00EF8BC2 /* player.png in Resources */,
-				B7A52FBB2600CFD600EF8BC2 /* body.png in Resources */,
+				B7823DC7265B58C00051509F /* HCGLColorShader.fsh in Resources */,
 				B7A52E1A25FF388E00EF8BC2 /* Assets.xcassets in Resources */,
 				B7A52E1825FF388C00EF8BC2 /* Main.storyboard in Resources */,
+				B7823DC5265B58AD0051509F /* HCGLColorShader.vsh in Resources */,
+				B75FAB9A265DF31C00D80312 /* HCGLTextureShader.fsh in Resources */,
+				B75FAB98265DF31600D80312 /* HCGLTextureShader.vsh in Resources */,
 				B7A52F9A25FF517F00EF8BC2 /* Shader.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		945EEDA4A955F5DB9DD297DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenGLDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7746DA0E525FE8C1BC0684B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenGLDemo/Pods-OpenGLDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OpenGLDemo/Pods-OpenGLDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OpenGLDemo/Pods-OpenGLDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B7A52E0625FF388C00EF8BC2 /* Sources */ = {
@@ -205,9 +500,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7A52E1525FF388C00EF8BC2 /* ViewController.m in Sources */,
+				B75FABB2265F966A00D80312 /* HCGLTextureNode.m in Sources */,
+				B75FABA1265E23A000D80312 /* HCCircularQueue.m in Sources */,
+				B7823DCB265B5E650051509F /* HCSnakeGLKView.m in Sources */,
 				B7A52FA82600508D00EF8BC2 /* HCGLKView01.m in Sources */,
 				B7A52E0F25FF388C00EF8BC2 /* AppDelegate.m in Sources */,
+				B75FAA89265CE90000D80312 /* HCGLDrawer.m in Sources */,
+				B7190B2C2679DD90007872CC /* HCMapNode.m in Sources */,
+				B7823DC0265B49250051509F /* HCGLBaseProgram.m in Sources */,
+				B717800626806D0600121642 /* HCSnakeRender.m in Sources */,
+				B7190D51267C956D007872CC /* HCGLSnakeDrawer.m in Sources */,
+				B7823DC3265B51320051509F /* HCGLColorProgram.m in Sources */,
+				B7190B2F267A1853007872CC /* HCSnakeNode.m in Sources */,
+				B7D9BD92267897A50063F572 /* HCGameSnake.m in Sources */,
+				B714C5382667836F00C39B75 /* HCJoyStickView.m in Sources */,
+				B7C3123C2664945A00F3F54A /* HCGLTextureManager.m in Sources */,
+				B7178012268081AD00121642 /* HCSnakeSkinCollection.m in Sources */,
+				B75FABA8265F3B6000D80312 /* HCLinkList.m in Sources */,
+				B75FABAC265F8DA200D80312 /* HCSnakeDataManager.m in Sources */,
+				B717800926806D8500121642 /* HCRenderManager.m in Sources */,
+				B75FABB6265F96A400D80312 /* HCGLTexture.m in Sources */,
+				B75FABA5265E71A100D80312 /* HCGLNode.m in Sources */,
+				B714C535266772E200C39B75 /* HCSnakeViewController.m in Sources */,
+				B7D9BD9726789ABE0063F572 /* MathUtils.m in Sources */,
 				B7A52E2025FF388E00EF8BC2 /* main.m in Sources */,
+				B75FAA8C265CEA0F00D80312 /* HCGLTextureProgram.m in Sources */,
+				B75FABAF265F907D00D80312 /* HCGLColorNode.m in Sources */,
+				B7C3123F2664B84300F3F54A /* HCGLBgDrawer.m in Sources */,
+				B7190B282679D4E1007872CC /* HCMapDataManger.m in Sources */,
+				B75FAB9D265DF6C100D80312 /* HCGLTextureDrawer.m in Sources */,
+				B717800C26806EC900121642 /* HCBaseRender.m in Sources */,
 				B7A52FB52600C8D200EF8BC2 /* HCGLKView02.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,17 +670,21 @@
 		};
 		B7A52E2425FF388E00EF8BC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03E19F3B4A52E6DA552A3027 /* Pods-OpenGLDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = OpenGLDemo/OpenGLDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 887YJJS9Q7;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OpenGLDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = OpenGLDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HC.OpenGLDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -367,17 +693,21 @@
 		};
 		B7A52E2525FF388E00EF8BC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5441E03FA5C453A0F110753D /* Pods-OpenGLDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = OpenGLDemo/OpenGLDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 887YJJS9Q7;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OpenGLDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = OpenGLDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.HC.OpenGLDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

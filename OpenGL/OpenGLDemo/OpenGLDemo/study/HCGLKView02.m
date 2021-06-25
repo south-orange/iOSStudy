@@ -42,14 +42,16 @@ typedef struct {
 
 - (void)setup {
     self.vertices = malloc(sizeof(SenceVertex) * 4);
-    self.vertices[0] = (SenceVertex){{-1, 1, 0}, {0, 1}};
-    self.vertices[1] = (SenceVertex){{-1, -1, 0}, {0, 0}};
-    self.vertices[2] = (SenceVertex){{1, 1, 0}, {1, 1}};
-    self.vertices[3] = (SenceVertex){{1, -1, 0}, {1, 0}};
+    self.vertices[0] = (SenceVertex){{-0.5, -0.5, 0}, {0, 0}};
+    self.vertices[1] = (SenceVertex){{-0.5, 0.5, 0}, {0, 1}};
+    self.vertices[2] = (SenceVertex){{0.5, 0.5, 0}, {1, 1}};
+    self.vertices[3] = (SenceVertex){{0.5, -0.5, 0}, {1, 0}};
     
     self.context = [EAGLContext.alloc initWithAPI:kEAGLRenderingAPIOpenGLES2];
     
     [EAGLContext setCurrentContext:self.context];
+    
+    glClearColor(0, 1, 1, 1);
 
     NSString *imagePath = [NSBundle.mainBundle pathForResource:@"player" ofType:@"png"];
     UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
@@ -60,8 +62,40 @@ typedef struct {
     self.baseEffect.texture2d0.target = textureInfo.target;
 }
 
+- (void)bindTexture {
+    CGImageRef textureImage = [UIImage imageNamed:@"head"].CGImage;
+    size_t width = CGImageGetWidth(textureImage);
+    size_t height = CGImageGetHeight(textureImage);
+    
+    void *textureData = malloc(width * height * 4);
+    CGContextRef textureContext = CGBitmapContextCreate(textureData, width, height, 8, width * 4, CGImageGetColorSpace(textureImage), kCGImageAlphaPremultipliedLast);
+    //翻转坐标系
+    CGContextTranslateCTM(textureContext, 0, height);
+    CGContextScaleCTM(textureContext, 1, -1);
+    //绘制
+    CGContextDrawImage(textureContext, CGRectMake(0, 0, width, height), textureImage);
+    //释放内存
+    CGContextRelease(textureContext);
+    
+    //生成纹理
+    GLuint textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    
+    //设置映射方式
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (float)width, (float)height, 0, GL_RGBA, GL_UNSIGNED_BYTE, textureData);
+    
+    free(textureData);
+}
+
 - (void)drawRect:(CGRect)rect {
-    [self.baseEffect prepareToDraw];
+    glClear(GL_COLOR_BUFFER_BIT);
+//    [self.baseEffect prepareToDraw];
     
     GLuint vertexBuffer;
     glGenBuffers(1, &vertexBuffer);
@@ -74,7 +108,7 @@ typedef struct {
     glEnableVertexAttribArray(GLKVertexAttribTexCoord0);
     glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, sizeof(SenceVertex), NULL + offsetof(SenceVertex, textureCoord));
     
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
     
     glDeleteBuffers(1, &vertexBuffer);
     vertexBuffer = 0;

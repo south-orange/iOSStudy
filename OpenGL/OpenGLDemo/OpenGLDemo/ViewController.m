@@ -6,8 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "HCGLKView01.h"
-#import "HCGLKView02.h"
+#import "HCSnakeViewController.h"
 
 @interface ViewController ()
 
@@ -17,12 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    HCGLKView01 *glkView = [HCGLKView01.alloc initWithFrame:self.view.frame];
-    [self.view addSubview:glkView];
-//    HCGLKView02 *glkView = [HCGLKView02.alloc initWithFrame:self.view.frame];
-//    [self.view addSubview:glkView];
-//    [glkView display];
+    
+    UIButton *enter = UIButton.new;
+    [enter setTitle:@"进入" forState:UIControlStateNormal];
+    [enter setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    enter.backgroundColor = UIColor.yellowColor;
+    enter.frame = CGRectMake(200, 200, 100, 50);
+    [enter addTarget:self action:@selector(enter) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:enter];
+}
+
+- (void)enter {
+    [self presentViewController:HCSnakeViewController.new animated:YES completion:nil];
 }
 
 

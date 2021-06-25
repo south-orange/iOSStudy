@@ -17,6 +17,10 @@
 @property (nonatomic, assign) GLuint renderBuffer;
 @property (nonatomic, assign) GLuint frameBuffer;
 
+@property(nonatomic, assign) GLuint textureID;
+
+@property(nonatomic, assign) GLuint vbo;
+
 @end
 
 @implementation HCGLKView01
@@ -33,6 +37,8 @@
     [self setupRenderAndFrameBuffer];
     [self setupGL];
     [self setupProgram];
+    [self setAttri];
+    [self setupTexture];
     [self render];
 }
 
@@ -54,7 +60,7 @@
 
 - (GLuint)setupTexture {
     //转化uiimage为cgimageref
-    CGImageRef textureImage = [UIImage imageNamed:@"player"].CGImage;
+    CGImageRef textureImage = [UIImage imageNamed:@"head"].CGImage;
     size_t width = CGImageGetWidth(textureImage);
     size_t height = CGImageGetHeight(textureImage);
     
@@ -73,17 +79,17 @@
     GLuint textureID;
     glGenTextures(1, &textureID);
     glBindTexture(GL_TEXTURE_2D, textureID);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (float)width, (float)height, 0, GL_RGBA, GL_UNSIGNED_BYTE, textureData);
     
     //设置映射方式
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glBindTexture(GL_TEXTURE_2D, 0);
+    
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (float)width, (float)height, 0, GL_RGBA, GL_UNSIGNED_BYTE, textureData);
     
     free(textureData);
-    
+    self.textureID = textureID;
     return textureID;
 }
 
@@ -112,14 +118,12 @@
 
 - (void)setupGL {
     glClearColor(0, 1, 1, 1);
-    glClear(GL_COLOR_BUFFER_BIT);
-    
     //设置混合模式，去除透明底部
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
     CGFloat scale = UIScreen.mainScreen.scale;
-    glViewport(self.frame.origin.x * scale, self.frame.origin.y * scale, self.frame.size.width * scale, self.frame.size.height * scale);
+    glViewport(0, 0, self.frame.size.width * scale, self.frame.size.height * scale);
 }
 
 - (void)setupProgram {
@@ -162,28 +166,11 @@
     }
 }
 
-- (void)render {
-    if (self.program == 0) {
-        return;
-    }
-    
-    GLfloat attrArray[] = {
-        -0.5f, 0.5f, 0.0f,     0.0f, 1.0f,
-        0.5f, 0.5f, 0.0f,     1.0f, 1.0f,
-        -0.5f, -0.5f, 0.0f,    0.0f, 0.0f,
-        0.5f, 0.5f, 0.0f,      1.0f, 1.0f,
-        0.5f, -0.5f, 0.0f,    1.0f, 0.0f,
-        -0.5f, -0.5f, 0.0f,     0.0f, 0.0f,
-    };
-    
+- (void)setAttri {
     //生成缓存标识符
-    GLuint attrBuffer;
-    glGenBuffers(1, &attrBuffer);
+    glGenBuffers(1, &_vbo);
     //绑定缓存
-    glBindBuffer(GL_ARRAY_BUFFER, attrBuffer);
-    //将数据存入缓存
-    glBufferData(GL_ARRAY_BUFFER, sizeof(attrArray), attrArray, GL_DYNAMIC_DRAW);
-    
+    glBindBuffer(GL_ARRAY_BUFFER, _vbo);
     //获取position变量
     GLuint position = glGetAttribLocation(self.program, "position");
     //传入position变量值
@@ -209,12 +196,35 @@
     };
     glUniformMatrix4fv(rotate, 1, GL_FALSE, (GLfloat *)&zRotation[0]);
     
-    GLuint textureID = [self setupTexture];
     GLuint colorMap = glGetUniformLocation(self.program, "colorMap");
-//    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, textureID);
     glUniform1i(colorMap, 0);//将colorMap赋值为GL_TEXTURE0，GL_TEXTURE0对应值为0
+}
+
+- (void)render {
+    if (self.program == 0) {
+        return;
+    }
     
+    glClear(GL_COLOR_BUFFER_BIT);
+    
+    GLfloat attrArray[] = {
+        -0.5f, 0.5f, 0.0f,     0.0f, 1.0f,
+        0.5f, 0.5f, 0.0f,     1.0f, 1.0f,
+        -0.5f, -0.5f, 0.0f,    0.0f, 0.0f,
+        0.5f, 0.5f, 0.0f,      1.0f, 1.0f,
+        0.5f, -0.5f, 0.0f,    1.0f, 0.0f,
+        -0.5f, -0.5f, 0.0f,     0.0f, 0.0f,
+    };
+    
+    //绑定缓存
+    glBindBuffer(GL_ARRAY_BUFFER, _vbo);
+    //将数据存入缓存
+    glBufferData(GL_ARRAY_BUFFER, sizeof(attrArray), attrArray, GL_DYNAMIC_DRAW);
+  
+    
+//    [self setupTexture];
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, self.textureID);
     
     glDrawArrays(GL_TRIANGLES, 0, 6);
     
