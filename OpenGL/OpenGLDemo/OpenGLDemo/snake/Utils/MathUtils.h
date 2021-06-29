@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (CGFloat)directionCGFromA:(CGPoint)a toB:(CGPoint)b distance:(CGFloat *)distance;
 + (CGFloat)directionGLFromA:(HCGLPoint)a toB:(HCGLPoint)b distance:(CGFloat *)distance;
 
++ (BOOL)isCollideBetweenA:(HCGLRect)a B:(HCGLRect)b;
+
 @end
 
 NS_ASSUME_NONNULL_END

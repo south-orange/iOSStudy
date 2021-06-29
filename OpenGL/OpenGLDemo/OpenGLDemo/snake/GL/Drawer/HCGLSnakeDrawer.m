@@ -14,6 +14,11 @@
 
 @implementation HCGLSnakeDrawerManager
 
+- (void)dealloc
+{
+    NSLog(@"dealloc %@", self);
+}
+
 - (instancetype)init
 {
     self = [super init];
@@ -34,9 +39,16 @@
     drawer.textureArray = [NSMutableArray arrayWithArray:textureArray];
 }
 
+- (void)removeSnakeDrawerWithKey:(NSString *)key {
+    [self.snakeDrawerDic removeObjectForKey:key];
+}
+
 - (void)drawWithProgram:(HCGLTextureProgram *)program {
-    for (HCGLSnakeDrawer *drawer in self.snakeDrawerDic.allValues) {
-        [drawer drawWithProgram:program];
+    NSArray<NSString *> *sortedArray = [self.snakeDrawerDic.allKeys sortedArrayUsingComparator:^NSComparisonResult(NSString * obj1, NSString * obj2) {
+        return [obj1 integerValue] < [obj2 integerValue];
+    }];
+    for (NSString *key in sortedArray) {
+        [self.snakeDrawerDic[key] drawWithProgram:program];
     }
 }
 

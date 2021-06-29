@@ -24,6 +24,9 @@
 
 @property(nonatomic, strong) HCRenderManager *renderManager;
 
+@property(nonatomic, strong) UILabel *fpsLabel;
+@property(nonatomic, assign) CGFloat fpsTime;
+
 @end
 
 @implementation HCSnakeViewController
@@ -68,6 +71,11 @@
     [addSnake addTarget:self action:@selector(addSnake) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addSnake];
     
+    self.fpsLabel = UILabel.new;
+    self.fpsLabel.frame = CGRectMake(0, 50, 200, 50);
+    self.fpsLabel.text = @"FPS: ";
+    [self.view addSubview:self.fpsLabel];
+    
     HCJoyStickView *joyStickView = HCJoyStickView.new;
     joyStickView.frame = CGRectMake(50, self.view.frame.size.height - 150, 100, 100);
     WEAKSELF
@@ -80,6 +88,7 @@
     [self.view addSubview:joyStickView];
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 / 60.0 target:self selector:@selector(updateGLKView) userInfo:nil repeats:YES];
+    
 }
 
 - (void)back {
@@ -87,7 +96,9 @@
 }
 
 - (void)printSnake {
-    [self.dataManager.mySnake printLog];
+    for (HCGameSnake *snake in self.dataManager.snakeArray) {
+        [snake printLog];
+    }
 }
 
 - (void)addSnake {
@@ -101,9 +112,14 @@
 }
 
 - (void)updateGLKView {
-    [self.dataManager updateDatas];
+    CGFloat start = CFAbsoluteTimeGetCurrent();
     [self.renderManager render];
+    [self.dataManager updateDatas];
     [self.glkView display];
+    CGFloat end = CFAbsoluteTimeGetCurrent();
+    CGFloat fps = 1 / (CFAbsoluteTimeGetCurrent() - self.fpsTime);
+    self.fpsLabel.text = [NSString stringWithFormat:@"time cost: %lf", end - start];
+    self.fpsTime = CFAbsoluteTimeGetCurrent();
 }
 
 @end

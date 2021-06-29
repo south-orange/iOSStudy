@@ -12,6 +12,7 @@
 #import "HCSnakeNode.h"
 #import "HCSnakeSkinCollection.h"
 #import "HCCircularQueue.h"
+#import "HCAILevel.h"
 
 @class HCMapDataManger;
 @class HCSnakeNode;
@@ -22,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSInteger snakeId;
 @property(nonatomic, strong, readonly) NSString *snakeIdString;
 @property(nonatomic, assign, readonly) BOOL isMySnake;
+@property(nonatomic, assign) BOOL isDead;
 
 @property(nonatomic, assign) CGFloat direction;
 @property(nonatomic, assign) CGFloat expectDirection;
@@ -35,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) HCSnakeSkinCollection *headSkin;
 @property(nonatomic, strong) HCSnakeSkinCollection *bodySkin;
+
+@property(nonatomic, strong) HCAILevel *aiLevel;
 
 @property(nonatomic, weak) HCMapDataManger *mapDataManager;
 

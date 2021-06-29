@@ -10,6 +10,7 @@
 
 #import "HCRenderManager.h"
 #import "HCSnakeRender.h"
+#import "HCGLSnakeDrawer.h"
 
 @interface HCRenderManager ()
 
@@ -36,9 +37,15 @@
 }
 
 - (void)render {
-    [self.glkView updateCenter:self.dataManager.mySnake.headNode.center scale:1.0];
+    [self.glkView updateCenter:self.dataManager.mySnake.headNode.center scale:1];
     for (HCGameSnake *snake in self.dataManager.snakeArray) {
+//        CGFloat start = CFAbsoluteTimeGetCurrent();
         NSString *snakeId = snake.snakeIdString;
+        if (snake.isDead) {
+            [self.snakeRenderDic removeObjectForKey:snakeId];
+            [self.glkView.snakeDrawerManager removeSnakeDrawerWithKey:snakeId];
+            continue;
+        }
         HCSnakeRender *snakeRender = self.snakeRenderDic[snakeId];
         if (snakeRender == nil) {
             snakeRender = [HCSnakeRender renderWithGLKView:self.glkView dataManager:self.dataManager];
@@ -46,6 +53,9 @@
             [self.snakeRenderDic setValue:snakeRender forKey:snakeId];
         }
         [snakeRender render];
+//        NSLog(@"%lf", CFAbsoluteTimeGetCurrent() - start);
+//        start = CFAbsoluteTimeGetCurrent();
+//        NSLog(@"\n");
     }
 }
 

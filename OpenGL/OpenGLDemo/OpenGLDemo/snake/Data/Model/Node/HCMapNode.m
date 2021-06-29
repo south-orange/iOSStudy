@@ -20,4 +20,12 @@
     return node;
 }
 
+- (CGRect)nodeCGRect {
+    return CGRectMake(self.center.x - self.size.width * 0.5, self.center.y - self.size.height * 0.5, self.size.width, self.size.height);
+}
+
+- (HCGLRect)nodeGLRect {
+    return HCGLRectMake(self.center.x - self.size.width * 0.5, self.center.y - self.size.height * 0.5, self.size.width, self.size.height);
+}
+
 @end

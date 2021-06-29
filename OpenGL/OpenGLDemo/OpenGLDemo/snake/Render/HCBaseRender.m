@@ -12,6 +12,11 @@
 
 @implementation HCBaseRender
 
+- (void)dealloc
+{
+    NSLog(@"dealloc %@", self);
+}
+
 + (instancetype)renderWithGLKView:(HCSnakeGLKView *)glkView dataManager:(HCSnakeDataManager *)dataManager {
     HCBaseRender *render = [self new];
     render.glkView = glkView;

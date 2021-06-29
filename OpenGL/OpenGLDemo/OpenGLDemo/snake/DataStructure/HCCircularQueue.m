@@ -53,7 +53,9 @@
 }
 
 - (void)removeAllNodes {
-    [self.objArray removeAllObjects];
+    for (NSInteger i = 0;i < self.count;i ++) {
+        self.objArray[(self.front + i) % self.capacity] = NSObject.new;
+    }
     self.front = 0;
     self.rear = 0;
     self.count = 0;

@@ -20,6 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)nodeWithNode:(HCMapNode *)otherNode;
 
+- (HCGLRect)nodeGLRect;
+- (CGRect)nodeCGRect;
+
 @end
 
 NS_ASSUME_NONNULL_END

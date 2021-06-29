@@ -12,6 +12,7 @@
 #import "HCMapDataManger.h"
 #import "HCGameSnake.h"
 #import "HCSnakeGLKView.h"
+#import "HCBaseEventHandler.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,9 +27,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) HCMapDataManger *mapDataManager;
 
+@property(nonatomic, strong) NSArray<__kindof HCBaseEventHandler *> *eventHandlerArray;
+
 - (void)updateDatas;
 
 - (void)addRandomSnake;
+- (void)removeSnake:(HCGameSnake *)snake;
 
 @end
 

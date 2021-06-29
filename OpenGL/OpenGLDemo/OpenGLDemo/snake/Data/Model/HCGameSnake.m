@@ -24,6 +24,11 @@
 
 @implementation HCGameSnake
 
+- (void)dealloc
+{
+    NSLog(@"dealloc %@", self);
+}
+
 static NSInteger p_snakeId = 2;
 
 + (NSInteger)randomSnakeId {
@@ -40,6 +45,7 @@ static NSInteger p_snakeId = 2;
     snake.snakeId = (snakeId == -1) ? [HCGameSnake randomSnakeId] : snakeId;
     snake.width = NODE_DISTANCE_INTERVAL * NODE_INDEX_INTERVAL;
     snake.length = length;
+    snake.aiLevel = HCAILevel.randomAILevel;
     snake.direction = MathUtils.randomDirection;
     snake.expectDirection = snake.direction;
     snake.bodyNodeQueue = HCCircularQueue.new;
@@ -67,7 +73,7 @@ static NSInteger p_snakeId = 2;
         return;
     }
     self.direction = [MathUtils changeDirectionFrom:self.direction to:self.expectDirection limit:MAX_DIRECTION_CHANGE];
-    [self growUp];
+//    [self growUp];
     [self moveBodyNodes];
 }
 
@@ -91,9 +97,6 @@ static NSInteger p_snakeId = 2;
     CGFloat moveX = NODE_DISTANCE_INTERVAL * cos(self.direction);
     CGFloat moveY = NODE_DISTANCE_INTERVAL * sin(self.direction);
     for (int i = 0;i < self.moveFrame;i ++) {
-        HCSnakeNode *lastNode = [self.bodyNodeQueue removeFirstNode];
-        [self.mapDataManager removeNode:lastNode];
-        
         float newHeadX = self.headNode.center.x + moveX;
         float newHeadY = self.headNode.center.y + moveY;
         HCSnakeNode *newHeadNode = HCSnakeNode.new;
@@ -101,13 +104,21 @@ static NSInteger p_snakeId = 2;
         newHeadNode.center = HCGLPointMake(newHeadX, newHeadY);
         newHeadNode.direction = self.direction;
         newHeadNode.size = self.headNode.size;
+        
+        HCSnakeNode *lastNode = [self.bodyNodeQueue removeFirstNode];
+        [self.mapDataManager removeNode:lastNode];
+        
         [self.bodyNodeQueue addNode:newHeadNode];
         [self.mapDataManager addNode:newHeadNode];
     }
 }
 
 - (void)die {
-    
+    self.isDead = YES;
+    for (NSUInteger i = 0;i < self.length;i ++) {
+        [self.mapDataManager removeNode:[self.bodyNodeQueue nodeAtIndex:i]];
+    }
+    [self.bodyNodeQueue removeAllNodes];
 }
 
 - (HCSnakeNode *)headNode {

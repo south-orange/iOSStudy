@@ -18,6 +18,9 @@
 		B7190B2C2679DD90007872CC /* HCMapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190B2B2679DD90007872CC /* HCMapNode.m */; };
 		B7190B2F267A1853007872CC /* HCSnakeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190B2E267A1853007872CC /* HCSnakeNode.m */; };
 		B7190D51267C956D007872CC /* HCGLSnakeDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190D50267C956D007872CC /* HCGLSnakeDrawer.m */; };
+		B74720BC26897E6E00819565 /* HCSnakeBehaviorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B74720BB26897E6E00819565 /* HCSnakeBehaviorHandler.m */; };
+		B74720C12689D12400819565 /* HCGeneralAIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B74720C02689D12400819565 /* HCGeneralAIUtils.m */; };
+		B74720C62689D23E00819565 /* HCAILevel.m in Sources */ = {isa = PBXBuildFile; fileRef = B74720C52689D23E00819565 /* HCAILevel.m */; };
 		B75FAA7B265B893600D80312 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75FAA7A265B893600D80312 /* UIKit.framework */; };
 		B75FAA89265CE90000D80312 /* HCGLDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FAA88265CE90000D80312 /* HCGLDrawer.m */; };
 		B75FAA8C265CEA0F00D80312 /* HCGLTextureProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = B75FAA8B265CEA0F00D80312 /* HCGLTextureProgram.m */; };
@@ -36,6 +39,8 @@
 		B7823DC5265B58AD0051509F /* HCGLColorShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = B7823DC4265B58AD0051509F /* HCGLColorShader.vsh */; };
 		B7823DC7265B58C00051509F /* HCGLColorShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = B7823DC6265B58C00051509F /* HCGLColorShader.fsh */; };
 		B7823DCB265B5E650051509F /* HCSnakeGLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7823DCA265B5E650051509F /* HCSnakeGLKView.m */; };
+		B79C2AD52685C27100FF0086 /* HCBaseEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B79C2AD42685C27100FF0086 /* HCBaseEventHandler.m */; };
+		B79C2AD82686024F00FF0086 /* HCSnakeMoveHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B79C2AD72686024F00FF0086 /* HCSnakeMoveHandler.m */; };
 		B7A52E0F25FF388C00EF8BC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A52E0E25FF388C00EF8BC2 /* AppDelegate.m */; };
 		B7A52E1525FF388C00EF8BC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A52E1425FF388C00EF8BC2 /* ViewController.m */; };
 		B7A52E1825FF388C00EF8BC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A52E1625FF388C00EF8BC2 /* Main.storyboard */; };
@@ -77,6 +82,12 @@
 		B7190B2E267A1853007872CC /* HCSnakeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeNode.m; sourceTree = "<group>"; };
 		B7190D4F267C956D007872CC /* HCGLSnakeDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLSnakeDrawer.h; sourceTree = "<group>"; };
 		B7190D50267C956D007872CC /* HCGLSnakeDrawer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLSnakeDrawer.m; sourceTree = "<group>"; };
+		B74720BA26897E6E00819565 /* HCSnakeBehaviorHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeBehaviorHandler.h; sourceTree = "<group>"; };
+		B74720BB26897E6E00819565 /* HCSnakeBehaviorHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeBehaviorHandler.m; sourceTree = "<group>"; };
+		B74720BF2689D12400819565 /* HCGeneralAIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGeneralAIUtils.h; sourceTree = "<group>"; };
+		B74720C02689D12400819565 /* HCGeneralAIUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGeneralAIUtils.m; sourceTree = "<group>"; };
+		B74720C42689D23E00819565 /* HCAILevel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAILevel.h; sourceTree = "<group>"; };
+		B74720C52689D23E00819565 /* HCAILevel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAILevel.m; sourceTree = "<group>"; };
 		B75FAA7A265B893600D80312 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B75FAA87265CE90000D80312 /* HCGLDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLDrawer.h; sourceTree = "<group>"; };
 		B75FAA88265CE90000D80312 /* HCGLDrawer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGLDrawer.m; sourceTree = "<group>"; };
@@ -111,6 +122,10 @@
 		B7823DC9265B5E650051509F /* HCSnakeGLKView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeGLKView.h; sourceTree = "<group>"; };
 		B7823DCA265B5E650051509F /* HCSnakeGLKView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeGLKView.m; sourceTree = "<group>"; };
 		B7823DCC265B7E360051509F /* HCGLHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGLHeader.h; sourceTree = "<group>"; };
+		B79C2AD32685C27100FF0086 /* HCBaseEventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBaseEventHandler.h; sourceTree = "<group>"; };
+		B79C2AD42685C27100FF0086 /* HCBaseEventHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBaseEventHandler.m; sourceTree = "<group>"; };
+		B79C2AD62686024F00FF0086 /* HCSnakeMoveHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeMoveHandler.h; sourceTree = "<group>"; };
+		B79C2AD72686024F00FF0086 /* HCSnakeMoveHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeMoveHandler.m; sourceTree = "<group>"; };
 		B7A52E0A25FF388C00EF8BC2 /* OpenGLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGLDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A52E0D25FF388C00EF8BC2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B7A52E0E25FF388C00EF8BC2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -166,6 +181,12 @@
 		B7104E8726857CC200F39FE0 /* EventHandler */ = {
 			isa = PBXGroup;
 			children = (
+				B79C2AD32685C27100FF0086 /* HCBaseEventHandler.h */,
+				B79C2AD42685C27100FF0086 /* HCBaseEventHandler.m */,
+				B79C2AD62686024F00FF0086 /* HCSnakeMoveHandler.h */,
+				B79C2AD72686024F00FF0086 /* HCSnakeMoveHandler.m */,
+				B74720BA26897E6E00819565 /* HCSnakeBehaviorHandler.h */,
+				B74720BB26897E6E00819565 /* HCSnakeBehaviorHandler.m */,
 			);
 			path = EventHandler;
 			sourceTree = "<group>";
@@ -192,6 +213,29 @@
 				B7190B2E267A1853007872CC /* HCSnakeNode.m */,
 			);
 			path = Node;
+			sourceTree = "<group>";
+		};
+		B74720C22689D20900819565 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7190B292679DD68007872CC /* Node */,
+				B74720C42689D23E00819565 /* HCAILevel.h */,
+				B74720C52689D23E00819565 /* HCAILevel.m */,
+				B7D9BD90267897A50063F572 /* HCGameSnake.h */,
+				B7D9BD91267897A50063F572 /* HCGameSnake.m */,
+				B7178010268081AD00121642 /* HCSnakeSkinCollection.h */,
+				B7178011268081AD00121642 /* HCSnakeSkinCollection.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B74720C32689D21D00819565 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B74720BF2689D12400819565 /* HCGeneralAIUtils.h */,
+				B74720C02689D12400819565 /* HCGeneralAIUtils.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B75CD2F62603446F00AEE498 /* snake */ = {
@@ -252,17 +296,14 @@
 		B75FABA9265F8D8D00D80312 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B74720C32689D21D00819565 /* Utils */,
+				B74720C22689D20900819565 /* Model */,
 				B7104E8726857CC200F39FE0 /* EventHandler */,
-				B7190B292679DD68007872CC /* Node */,
 				B7D9BD9326789A4F0063F572 /* GameConfig.h */,
 				B75FABAA265F8DA200D80312 /* HCSnakeDataManager.h */,
 				B75FABAB265F8DA200D80312 /* HCSnakeDataManager.m */,
 				B7190B262679D4E1007872CC /* HCMapDataManger.h */,
 				B7190B272679D4E1007872CC /* HCMapDataManger.m */,
-				B7D9BD90267897A50063F572 /* HCGameSnake.h */,
-				B7D9BD91267897A50063F572 /* HCGameSnake.m */,
-				B7178010268081AD00121642 /* HCSnakeSkinCollection.h */,
-				B7178011268081AD00121642 /* HCSnakeSkinCollection.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -508,8 +549,10 @@
 				B75FAA89265CE90000D80312 /* HCGLDrawer.m in Sources */,
 				B7190B2C2679DD90007872CC /* HCMapNode.m in Sources */,
 				B7823DC0265B49250051509F /* HCGLBaseProgram.m in Sources */,
+				B79C2AD52685C27100FF0086 /* HCBaseEventHandler.m in Sources */,
 				B717800626806D0600121642 /* HCSnakeRender.m in Sources */,
 				B7190D51267C956D007872CC /* HCGLSnakeDrawer.m in Sources */,
+				B74720BC26897E6E00819565 /* HCSnakeBehaviorHandler.m in Sources */,
 				B7823DC3265B51320051509F /* HCGLColorProgram.m in Sources */,
 				B7190B2F267A1853007872CC /* HCSnakeNode.m in Sources */,
 				B7D9BD92267897A50063F572 /* HCGameSnake.m in Sources */,
@@ -517,6 +560,9 @@
 				B7C3123C2664945A00F3F54A /* HCGLTextureManager.m in Sources */,
 				B7178012268081AD00121642 /* HCSnakeSkinCollection.m in Sources */,
 				B75FABA8265F3B6000D80312 /* HCLinkList.m in Sources */,
+				B79C2AD82686024F00FF0086 /* HCSnakeMoveHandler.m in Sources */,
+				B74720C62689D23E00819565 /* HCAILevel.m in Sources */,
+				B74720C12689D12400819565 /* HCGeneralAIUtils.m in Sources */,
 				B75FABAC265F8DA200D80312 /* HCSnakeDataManager.m in Sources */,
 				B717800926806D8500121642 /* HCRenderManager.m in Sources */,
 				B75FABB6265F96A400D80312 /* HCGLTexture.m in Sources */,

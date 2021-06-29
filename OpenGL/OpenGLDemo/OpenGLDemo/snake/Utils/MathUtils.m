@@ -17,12 +17,6 @@
     return a + (b - a) * random;
 }
 
-+ (CGPoint)randomCGPointInRect:(CGRect)rect {
-    CGFloat x = [self randomDoubleBetweenA:0 B:rect.size.width];
-    CGFloat y = [self randomDoubleBetweenA:0 B:rect.size.height];
-    return CGPointMake(rect.origin.x + x, rect.origin.y + y);
-}
-
 + (HCGLPoint)randomGLPointInRect:(HCGLRect)rect {
     CGFloat x = [self randomDoubleBetweenA:0 B:rect.width];
     CGFloat y = [self randomDoubleBetweenA:0 B:rect.height];
@@ -84,6 +78,22 @@
     }
     *distance = c;
     return direction;
+}
+
++ (BOOL)isCollideBetweenA:(HCGLRect)a B:(HCGLRect)b {
+    CGFloat aLeft = a.x;
+    CGFloat aRight = a.x + a.width;
+    CGFloat aTop = a.y + a.height;
+    CGFloat aBottom = a.y;
+    CGFloat bLeft = b.x;
+    CGFloat bRight = b.x + b.width;
+    CGFloat bTop = b.y + b.height;
+    CGFloat bBottom = b.y;
+    
+    if (aLeft < bLeft || aTop > bTop || aRight > bRight || aBottom < bBottom) {
+        return YES;
+    }
+    return NO;
 }
 
 @end

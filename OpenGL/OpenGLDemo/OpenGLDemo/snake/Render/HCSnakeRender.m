@@ -33,9 +33,9 @@
 - (HCLinkList *)drawListWithBodyData {
     NSMutableSet *drawNodeSet = NSMutableSet.set;
     HCLinkList *snakeDrawList = HCLinkList.new;
-    for (NSUInteger i = 0;i < self.snake.length;i += NODE_INDEX_INTERVAL - 1) {
+    for (NSUInteger i = 0;i < self.snake.length;i += NODE_INDEX_INTERVAL + 1) {
         HCSnakeNode *bodyNode = [self.snake.bodyNodeQueue nodeAtIndex:i];
-        HCGLTextureNode *drawbodyNode = [HCGLTextureNode.alloc initWithPosition:bodyNode.center size:HCGLSizeMake(self.snake.width, self.snake.width) direction:bodyNode.direction];
+        HCGLTextureNode *drawbodyNode = [HCGLTextureNode.alloc initWithPosition:bodyNode.center size:HCGLSizeMake(self.snake.width * 2, self.snake.width * 2) direction:bodyNode.direction];
         drawbodyNode.texture = self.bodyTexture;
         if (![drawNodeSet containsObject:drawbodyNode.toString]) {
             [drawNodeSet addObject:drawbodyNode.toString];
@@ -43,7 +43,7 @@
         }
     }
     HCSnakeNode *headNode = self.snake.headNode;
-    HCGLTextureNode *drawHeadNode = [HCGLTextureNode.alloc initWithPosition:headNode.center size:HCGLSizeMake(self.snake.width, self.snake.width) direction:self.snake.direction];
+    HCGLTextureNode *drawHeadNode = [HCGLTextureNode.alloc initWithPosition:headNode.center size:HCGLSizeMake(self.snake.width * 2, self.snake.width * 2) direction:self.snake.direction];
     drawHeadNode.texture = self.headTexture;
     [snakeDrawList addNode:[HCLinkNode nodeWithValue:drawHeadNode]];
     return snakeDrawList;
