@@ -32,6 +32,9 @@
     if (self) {
         self.capacity = HCCircleQueueInitSize;
         self.objArray = [NSMutableArray arrayWithCapacity:self.capacity];
+        for (NSUInteger i = 0;i < self.capacity;i ++) {
+            [self.objArray addObject:NSObject.new];
+        }
         self.front = 0;
         self.rear = 0;
         self.count = 0;

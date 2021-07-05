@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)updateTextureIndex:(NSUInteger)index;
 
+- (void)calculateVertexArrayTexture;
+
 @end
 
 NS_ASSUME_NONNULL_END

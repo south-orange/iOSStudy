@@ -28,7 +28,7 @@
         self.mapDataManager = HCMapDataManger.new;
         self.mapDataManager.mapSize = HCGLSizeMake(MAP_WIDTH, MAP_HEIGHT);
         self.snakeArray = NSMutableArray.array;
-        self.mySnake = [HCGameSnake randomPlayerSnakeWithSnakeId:MY_SNAKE_ID length:300 headCenter:[self randomHeadPosition:YES]];
+        self.mySnake = [HCGameSnake randomPlayerSnakeWithSnakeId:MY_SNAKE_ID length:30000 headCenter:[self randomHeadPosition:YES]];
         self.mySnake.mapDataManager = self.mapDataManager;
         [self.snakeArray addObject:self.mySnake];
         
@@ -49,7 +49,7 @@
 }
 
 - (void)addRandomSnake {
-    HCGameSnake *snake = [HCGameSnake randomPlayerSnakeWithSnakeId:-1 length:300 headCenter:[self randomHeadPosition:NO]];
+    HCGameSnake *snake = [HCGameSnake randomPlayerSnakeWithSnakeId:-1 length:[MathUtils randomIntegerBetweenA:300 B:10000] headCenter:[self randomHeadPosition:NO]];
     snake.mapDataManager = self.mapDataManager;
     snake.speed = 0.5;
     [self.snakeArray addObject:snake];

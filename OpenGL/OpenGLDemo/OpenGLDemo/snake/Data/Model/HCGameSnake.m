@@ -48,14 +48,14 @@ static NSInteger p_snakeId = 2;
     snake.aiLevel = HCAILevel.randomAILevel;
     snake.direction = MathUtils.randomDirection;
     snake.expectDirection = snake.direction;
-    snake.bodyNodeQueue = HCCircularQueue.new;
+    snake.bodyNodeArray = NSMutableArray.array;
     HCSnakeNode *node = HCSnakeNode.new;
     node.snakeId = snake.snakeId;
     node.size = HCGLSizeMake(snake.width * 2, snake.width * 2);
     node.center = center;
     node.direction = snake.direction;
     for (NSInteger i = length - 1;i >= 0;i --) {
-        [snake.bodyNodeQueue addNode:[HCSnakeNode nodeWithNode:node]];
+        [snake.bodyNodeArray addObject:[HCSnakeNode nodeWithNode:node]];
     }
     return snake;
 }
@@ -63,7 +63,7 @@ static NSInteger p_snakeId = 2;
 - (void)setMapDataManager:(HCMapDataManger *)mapDataManager {
     _mapDataManager = mapDataManager;
     for (NSUInteger i = 0;i < self.length;i ++) {
-        [mapDataManager addNode:[self.bodyNodeQueue nodeAtIndex:i]];
+        [mapDataManager addNode:self.bodyNodeArray[i]];
     }
 }
 
@@ -87,8 +87,8 @@ static NSInteger p_snakeId = 2;
         self.growUpCD = 0;
     }
     if (self.growUpCD == 0) {
-        HCSnakeNode *node = [HCSnakeNode nodeWithNode:self.bodyNodeQueue.firstNode];
-        [self.bodyNodeQueue addNodeToFront:node];
+        HCSnakeNode *node = [HCSnakeNode nodeWithNode:self.bodyNodeArray[0]];
+        [self.bodyNodeArray insertObject:node atIndex:0];
         self.length ++;
     }
 }
@@ -105,10 +105,11 @@ static NSInteger p_snakeId = 2;
         newHeadNode.direction = self.direction;
         newHeadNode.size = self.headNode.size;
         
-        HCSnakeNode *lastNode = [self.bodyNodeQueue removeFirstNode];
+        HCSnakeNode *lastNode = self.bodyNodeArray[0];
+        [self.bodyNodeArray removeObjectAtIndex:0];
         [self.mapDataManager removeNode:lastNode];
         
-        [self.bodyNodeQueue addNode:newHeadNode];
+        [self.bodyNodeArray addObject:newHeadNode];
         [self.mapDataManager addNode:newHeadNode];
     }
 }
@@ -116,20 +117,20 @@ static NSInteger p_snakeId = 2;
 - (void)die {
     self.isDead = YES;
     for (NSUInteger i = 0;i < self.length;i ++) {
-        [self.mapDataManager removeNode:[self.bodyNodeQueue nodeAtIndex:i]];
+        [self.mapDataManager removeNode:self.bodyNodeArray[i]];
     }
-    [self.bodyNodeQueue removeAllNodes];
+    [self.bodyNodeArray removeAllObjects];
 }
 
 - (HCSnakeNode *)headNode {
-    return self.bodyNodeQueue.lastNode;
+    return self.bodyNodeArray.lastObject;
 }
 
 - (void)printLog {
     NSMutableString *log = NSMutableString.string;
     [log appendFormat:@"Snake snakeId : %ld, length : %lu \nheadPos : (%lf, %lf), \ndirection : %f, \nexpectedDirection : %f\n", self.snakeId, self.length, self.headNode.center.x, self.headNode.center.y, self.direction / M_PI * 180, self.expectDirection / M_PI * 180];
     __weak typeof(log) weakLog = log;
-    [self.bodyNodeQueue enumerateObjectsUsingBlock:^(HCSnakeNode * _Nonnull obj, NSUInteger index, BOOL * _Nonnull stop) {
+    [self.bodyNodeArray enumerateObjectsUsingBlock:^(HCSnakeNode * _Nonnull obj, NSUInteger index, BOOL * _Nonnull stop) {
         [weakLog appendFormat:@"index : %lu, snakeId : %lu, center : (%lf, %lf), direction : %f \n", index, obj.snakeId, obj.center.x, obj.center.y, obj.direction];
     }];
     NSLog(@"%@", log);

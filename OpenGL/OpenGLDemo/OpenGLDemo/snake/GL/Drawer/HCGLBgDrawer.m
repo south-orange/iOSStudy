@@ -23,6 +23,7 @@
     texture.textureIndex = self.textureArray.count - 1;
     HCGLTextureNode *bg = [HCGLTextureNode.alloc initWithPosition:HCGLPointZero size:size direction:0.0];
     bg.texture = texture;
+    [bg calculateVertexArray];
     if (bg) {
         [self.linkList addNode:[HCLinkNode nodeWithValue:bg]];
     }

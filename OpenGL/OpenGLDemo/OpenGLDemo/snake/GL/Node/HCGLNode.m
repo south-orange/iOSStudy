@@ -22,8 +22,6 @@ static NSUInteger nodeNum = 0;
         _direction = direction;
         _alpha = alpha;
         
-        [self p_calculateVertexArray];
-        
         _nodeId = nodeNum;
         nodeNum ++;
     }
@@ -33,37 +31,9 @@ static NSUInteger nodeNum = 0;
 - (instancetype)initWithPosition:(HCGLPoint)position size:(HCGLSize)size direction:(GLfloat)direction {
     return [self initWithPosition:position size:size direction:direction alpha:1.0];
 }
-
-- (void)setPosition:(HCGLPoint)position {
-    _position = position;
-    [self p_calculateVertexArray];
-}
-
-- (void)setSize:(HCGLSize)size {
-    _size = size;
-    [self p_calculateVertexArray];
-}
-
-- (void)setDirection:(GLfloat)direction {
-    _direction = direction;
-    [self p_calculateVertexArray];
-}
-
-- (void)setAlpha:(GLfloat)alpha {
-    _alpha = alpha;
-    [self p_calculateVertexArray];
-}
     
-- (void)p_calculateVertexArray {
+- (void)calculateVertexArray {
     
-}
-
-- (NSString *)toString {
-    return [NSString stringWithFormat:@"%lf,%lf,%lf,%lf,%lf,%lf,%d", self.position.x, self.position.y, self.size.width, self.size.height, self.direction, self.alpha, self.hidden];
-}
-
-- (BOOL)isEqual:(HCGLNode *)object {
-    return [self.toString isEqualToString:object.toString];
 }
 
 @end

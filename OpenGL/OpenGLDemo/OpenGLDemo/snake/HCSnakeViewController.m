@@ -112,13 +112,11 @@
 }
 
 - (void)updateGLKView {
-    CGFloat start = CFAbsoluteTimeGetCurrent();
     [self.renderManager render];
     [self.dataManager updateDatas];
     [self.glkView display];
-    CGFloat end = CFAbsoluteTimeGetCurrent();
     CGFloat fps = 1 / (CFAbsoluteTimeGetCurrent() - self.fpsTime);
-    self.fpsLabel.text = [NSString stringWithFormat:@"time cost: %lf", end - start];
+    self.fpsLabel.text = [NSString stringWithFormat:@"fps: %lf", fps];
     self.fpsTime = CFAbsoluteTimeGetCurrent();
 }
 

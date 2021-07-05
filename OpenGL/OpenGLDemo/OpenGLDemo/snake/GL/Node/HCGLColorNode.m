@@ -28,7 +28,6 @@
     self.b = hex& 0xff;
     self.a = alpha * 255;
     self.alpha = self.a;
-    [self p_calculateVertexArray];
 }
 
 - (void)setColorWithHex:(uint32_t)hex {
@@ -47,7 +46,7 @@
     return [super initWithPosition:position size:size direction:direction alpha:0.0];
 }
 
-- (void)p_calculateVertexArray {
+- (void)calculateVertexArray {
     if (self.alpha == 0) {
         return;
     }

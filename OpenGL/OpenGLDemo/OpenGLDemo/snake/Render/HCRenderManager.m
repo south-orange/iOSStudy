@@ -37,9 +37,8 @@
 }
 
 - (void)render {
-    [self.glkView updateCenter:self.dataManager.mySnake.headNode.center scale:1];
+    [self.glkView updateCenter:self.dataManager.mySnake.headNode.center scale:0.1];
     for (HCGameSnake *snake in self.dataManager.snakeArray) {
-//        CGFloat start = CFAbsoluteTimeGetCurrent();
         NSString *snakeId = snake.snakeIdString;
         if (snake.isDead) {
             [self.snakeRenderDic removeObjectForKey:snakeId];
@@ -53,9 +52,6 @@
             [self.snakeRenderDic setValue:snakeRender forKey:snakeId];
         }
         [snakeRender render];
-//        NSLog(@"%lf", CFAbsoluteTimeGetCurrent() - start);
-//        start = CFAbsoluteTimeGetCurrent();
-//        NSLog(@"\n");
     }
 }
 

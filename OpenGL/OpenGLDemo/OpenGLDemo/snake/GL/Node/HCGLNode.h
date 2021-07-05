@@ -24,9 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithPosition:(HCGLPoint)position size:(HCGLSize)size direction:(GLfloat)direction alpha:(GLfloat)alpha;
 - (instancetype)initWithPosition:(HCGLPoint)position size:(HCGLSize)size direction:(GLfloat)direction;
 
-- (void)p_calculateVertexArray;
-
-- (NSString *)toString;
+- (void)calculateVertexArray;
 
 @end
 

@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MathUtils : NSObject
 
++ (NSInteger)randomIntegerBetweenA:(NSUInteger)a B:(NSUInteger)b;
 + (CGFloat)randomDoubleBetweenA:(CGFloat)a B:(CGFloat)b;
 
-+ (CGPoint)randomCGPointInRect:(CGRect)rect;
 + (HCGLPoint)randomGLPointInRect:(HCGLRect)rect;
 
 + (CGFloat)randomDirection;

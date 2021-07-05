@@ -12,6 +12,11 @@
 
 @implementation MathUtils
 
++ (NSInteger)randomIntegerBetweenA:(NSUInteger)a B:(NSUInteger)b {
+    NSUInteger random = arc4random() % (b - a);
+    return a + random;
+}
+
 + (CGFloat)randomDoubleBetweenA:(CGFloat)a B:(CGFloat)b {
     CGFloat random = arc4random() % 10000 / 10000.0;
     return a + (b - a) * random;

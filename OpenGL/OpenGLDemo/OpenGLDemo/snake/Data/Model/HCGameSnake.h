@@ -33,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign, readonly) NSUInteger length;
 @property(nonatomic, assign) CGFloat width;
 
+@property(nonatomic, strong) NSMutableArray<HCSnakeNode *> *bodyNodeArray;
 @property(nonatomic, strong) HCCircularQueue<HCSnakeNode *> *bodyNodeQueue;
 
 @property(nonatomic, strong) HCSnakeSkinCollection *headSkin;
