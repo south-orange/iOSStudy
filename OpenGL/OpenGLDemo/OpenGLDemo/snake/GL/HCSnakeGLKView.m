@@ -26,7 +26,6 @@
 @property(nonatomic, strong) HCGLColorProgram *colorProgram;
 
 @property(nonatomic, strong) HCGLBgDrawer *bgDrawer;
-@property(nonatomic, strong) HCGLSnakeDrawer *snakeDrawer;
 
 @end
 

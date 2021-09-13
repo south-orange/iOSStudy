@@ -11,7 +11,7 @@
 #import "HCGLTextureProgram.h"
 
 #define MVPMatrix 0
-#define TextureSmaplers 1
+#define TextureSamplers 1
 #define UniformCount 2
 
 @interface HCGLTextureProgram () {
@@ -45,7 +45,7 @@
         // texture sampler, 最多支持8个多重纹理
         if (!_didLoadSamplerIds) {
             const GLint samplerIds[kHCGLMutiTextureProgramMaxTextureNum] = {0, 1, 2, 3, 4, 5, 6, 7};
-            glUniform1iv(_uniforms[TextureSmaplers], kHCGLMutiTextureProgramMaxTextureNum, (const GLint *)samplerIds);
+            glUniform1iv(_uniforms[TextureSamplers], kHCGLMutiTextureProgramMaxTextureNum, (const GLint *)samplerIds);
             _didLoadSamplerIds = YES;
         }
     }
@@ -103,7 +103,7 @@
     }
     
     _uniforms[MVPMatrix] = glGetUniformLocation(self.program, "u_mvpMatrix");
-    _uniforms[TextureSmaplers] = glGetUniformLocation(self.program, "u_textureSamplers");
+    _uniforms[TextureSamplers] = glGetUniformLocation(self.program, "u_textureSamplers");
     
     if (vertShader) {
         glDetachShader(self.program, vertShader);

@@ -17,10 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HCGLSnakeDrawerManager : NSObject
 
 @property(nonatomic, weak) HCGLTextureManager *textureManager;
-@property(nonatomic, strong) NSMutableDictionary<NSString *, HCGLSnakeDrawer *> *snakeDrawerDic;
-
-- (void)updateDataWithKey:(NSString *)key dataList:(HCLinkList *)dataList textureArray:(NSArray *)textureArray;
-- (void)removeSnakeDrawerWithKey:(NSString *)key;
+@property(nonatomic, strong) NSMutableDictionary<NSNumber *, HCGLSnakeDrawer *> *snakeDrawerDic;
 
 - (void)drawWithProgram:(HCGLTextureProgram *)program;
 

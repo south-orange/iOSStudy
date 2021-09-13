@@ -15,7 +15,8 @@
 
 + (instancetype)randomAILevel {
     HCAILevel *aiLevel = HCAILevel.new;
-    aiLevel.borderCheckDistance = [MathUtils randomDoubleBetweenA:100 B:200];
+//    aiLevel.borderCheckDistance = [MathUtils randomDoubleBetweenA:0 B:200];
+    aiLevel.borderCheckDistance = 200;
     return aiLevel;
 }
 

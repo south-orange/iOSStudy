@@ -9,7 +9,7 @@
     
 
 #import "HCGLTextureDrawer.h"
-#import <OpenGLES/ES2/glext.h>
+#import <OpenGLES/ES3/gl.h>
 #import "HCGLTextureNode.h"
 #import "HCGLTextureProgram.h"
 
@@ -43,8 +43,8 @@
 - (void)dealloc {
     glDeleteBuffers(1, &_vbo);
     glDeleteBuffers(1, &_ebo);
-    glDeleteVertexArraysOES(1, &_vao);
-    glBindVertexArrayOES(0);
+    glDeleteVertexArrays(1, &_vao);
+    glBindVertexArray(0);
     
     HCGL_FREE(_vertexArray);
     HCGL_FREE(_indiceArray);
@@ -110,9 +110,9 @@
     GLsizeiptr length = sizeof(HCGLTextureNodeVertex) * self.count * kHCGLVertexCount;
     glBufferData(GL_ARRAY_BUFFER, length, _vertexArray, GL_DYNAMIC_DRAW);
     
-    glBindVertexArrayOES(_vao);
+    glBindVertexArray(_vao);
     glDrawElements(GL_TRIANGLES, kHCGLIndiceCount * (GLsizei)self.count, GL_UNSIGNED_INT, 0);
-    glBindVertexArrayOES(0);
+    glBindVertexArray(0);
 }
 
 #pragma mark - setup
@@ -155,11 +155,11 @@
 - (void)p_setVAOVBO {
     glDeleteBuffers(1, &_vbo);
     glDeleteBuffers(1, &_ebo);
-    glDeleteVertexArraysOES(1, &_vao);
-    glBindVertexArrayOES(0);
+    glDeleteVertexArrays(1, &_vao);
+    glBindVertexArray(0);
     
-    glGenVertexArraysOES(1, &_vao);
-    glBindVertexArrayOES(_vao);
+    glGenVertexArrays(1, &_vao);
+    glBindVertexArray(_vao);
     
     glGenBuffers(1, &_vbo);
     glBindBuffer(GL_ARRAY_BUFFER, _vbo);
@@ -175,9 +175,9 @@
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _ebo);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint) * self.capacity * kHCGLIndiceCount, _indiceArray, GL_STATIC_DRAW);
     
-    glBindVertexArrayOES(0);
-    
     glBindBuffer(GL_ARRAY_BUFFER, 0);
+    
+    glBindVertexArray(0);
 }
 
 - (void)p_setIndiceArray {
@@ -204,7 +204,7 @@
     if (_ebo) {
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _ebo);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint) * self.capacity * kHCGLIndiceCount, _indiceArray, GL_STATIC_DRAW);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+//        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     }
 }
 

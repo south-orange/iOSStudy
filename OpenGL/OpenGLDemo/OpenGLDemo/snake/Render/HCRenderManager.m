@@ -17,7 +17,7 @@
 @property(nonatomic, weak) HCSnakeGLKView *glkView;
 @property(nonatomic, weak) HCSnakeDataManager *dataManager;
 
-@property(nonatomic, strong) NSMutableDictionary<NSString *, HCSnakeRender *> *snakeRenderDic;
+@property(nonatomic, strong) NSMutableDictionary<NSNumber *, HCSnakeRender *> *snakeRenderDic;
 
 @end
 
@@ -37,19 +37,20 @@
 }
 
 - (void)render {
+    
     [self.glkView updateCenter:self.dataManager.mySnake.headNode.center scale:0.1];
     for (HCGameSnake *snake in self.dataManager.snakeArray) {
-        NSString *snakeId = snake.snakeIdString;
+        NSNumber *snakeId = snake.snakeIdObj;
         if (snake.isDead) {
             [self.snakeRenderDic removeObjectForKey:snakeId];
-            [self.glkView.snakeDrawerManager removeSnakeDrawerWithKey:snakeId];
+            [self.glkView.snakeDrawerManager.snakeDrawerDic removeObjectForKey:snakeId];
             continue;
         }
         HCSnakeRender *snakeRender = self.snakeRenderDic[snakeId];
         if (snakeRender == nil) {
             snakeRender = [HCSnakeRender renderWithGLKView:self.glkView dataManager:self.dataManager];
             snakeRender.snake = snake;
-            [self.snakeRenderDic setValue:snakeRender forKey:snakeId];
+            [self.snakeRenderDic setValue:snakeRender forKey:snake.snakeIdObj];
         }
         [snakeRender render];
     }

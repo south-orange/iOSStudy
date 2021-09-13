@@ -1,6 +1,6 @@
 //
 //
-//  HCMapDataManger.h
+//  HCMapDataManager.h
 //  OpenGLDemo
 //
 //  Created by 霍橙 on 2021/6/16.
@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HCMapDataManger : NSObject
+@interface HCMapDataManager : NSObject
 
 @property(nonatomic, assign) HCGLSize mapSize;
 

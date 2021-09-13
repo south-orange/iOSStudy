@@ -14,14 +14,14 @@
 #import "HCCircularQueue.h"
 #import "HCAILevel.h"
 
-@class HCMapDataManger;
+@class HCMapDataManager;
 @class HCSnakeNode;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HCGameSnake : NSObject
 
 @property(nonatomic, assign) NSInteger snakeId;
-@property(nonatomic, strong, readonly) NSString *snakeIdString;
+@property(nonatomic, strong, readonly) NSNumber *snakeIdObj;
 @property(nonatomic, assign, readonly) BOOL isMySnake;
 @property(nonatomic, assign) BOOL isDead;
 
@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong) HCAILevel *aiLevel;
 
-@property(nonatomic, weak) HCMapDataManger *mapDataManager;
+@property(nonatomic, weak) HCMapDataManager *mapDataManager;
 
 + (void)clearSnakeId;
 

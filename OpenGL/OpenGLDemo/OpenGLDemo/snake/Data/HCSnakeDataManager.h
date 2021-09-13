@@ -9,7 +9,7 @@
     
 
 #import <Foundation/Foundation.h>
-#import "HCMapDataManger.h"
+#import "HCMapDataManager.h"
 #import "HCGameSnake.h"
 #import "HCSnakeGLKView.h"
 #import "HCBaseEventHandler.h"
@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSMutableArray<HCGameSnake *> *snakeArray;
 @property(nonatomic, strong) HCGameSnake *mySnake;
 
-@property(nonatomic, strong) HCMapDataManger *mapDataManager;
+@property(nonatomic, strong) HCMapDataManager *mapDataManager;
 
 @property(nonatomic, strong) NSArray<__kindof HCBaseEventHandler *> *eventHandlerArray;
 

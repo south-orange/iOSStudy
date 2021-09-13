@@ -12,11 +12,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @class HCGameSnake;
-@class HCMapDataManger;
+@class HCMapDataManager;
 
 @interface HCGeneralAIUtils : NSObject
 
-+ (void)performAiSnake:(HCGameSnake *)snake mapManager:(HCMapDataManger *)mapManager mySnake:(HCGameSnake *)mySnake;
++ (void)performAiSnake:(HCGameSnake *)snake mapManager:(HCMapDataManager *)mapManager mySnake:(HCGameSnake *)mySnake;
 
 @end
 

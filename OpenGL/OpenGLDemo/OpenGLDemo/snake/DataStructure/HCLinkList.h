@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addNodeToFront:(HCLinkNode *)node;
 - (HCLinkNode *)removeNode:(HCLinkNode *)node;// 返回删除节点的下一个节点
 - (void)removeAllNodes;
+- (void)removeAllNodesAfterNode:(HCLinkNode *)node;// 删除某一节点之后的所有节点
 
 - (void)enumerateObjectsUsingBlock:(void (^)(HCLinkNode *obj, NSUInteger index, BOOL *stop))block;
 

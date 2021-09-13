@@ -14,7 +14,7 @@
 		B717800926806D8500121642 /* HCRenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B717800826806D8500121642 /* HCRenderManager.m */; };
 		B717800C26806EC900121642 /* HCBaseRender.m in Sources */ = {isa = PBXBuildFile; fileRef = B717800B26806EC900121642 /* HCBaseRender.m */; };
 		B7178012268081AD00121642 /* HCSnakeSkinCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B7178011268081AD00121642 /* HCSnakeSkinCollection.m */; };
-		B7190B282679D4E1007872CC /* HCMapDataManger.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190B272679D4E1007872CC /* HCMapDataManger.m */; };
+		B7190B282679D4E1007872CC /* HCMapDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190B272679D4E1007872CC /* HCMapDataManager.m */; };
 		B7190B2C2679DD90007872CC /* HCMapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190B2B2679DD90007872CC /* HCMapNode.m */; };
 		B7190B2F267A1853007872CC /* HCSnakeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190B2E267A1853007872CC /* HCSnakeNode.m */; };
 		B7190D51267C956D007872CC /* HCGLSnakeDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = B7190D50267C956D007872CC /* HCGLSnakeDrawer.m */; };
@@ -74,8 +74,8 @@
 		B717800B26806EC900121642 /* HCBaseRender.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBaseRender.m; sourceTree = "<group>"; };
 		B7178010268081AD00121642 /* HCSnakeSkinCollection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeSkinCollection.h; sourceTree = "<group>"; };
 		B7178011268081AD00121642 /* HCSnakeSkinCollection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSnakeSkinCollection.m; sourceTree = "<group>"; };
-		B7190B262679D4E1007872CC /* HCMapDataManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMapDataManger.h; sourceTree = "<group>"; };
-		B7190B272679D4E1007872CC /* HCMapDataManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMapDataManger.m; sourceTree = "<group>"; };
+		B7190B262679D4E1007872CC /* HCMapDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMapDataManager.h; sourceTree = "<group>"; };
+		B7190B272679D4E1007872CC /* HCMapDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMapDataManager.m; sourceTree = "<group>"; };
 		B7190B2A2679DD90007872CC /* HCMapNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMapNode.h; sourceTree = "<group>"; };
 		B7190B2B2679DD90007872CC /* HCMapNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMapNode.m; sourceTree = "<group>"; };
 		B7190B2D267A1853007872CC /* HCSnakeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSnakeNode.h; sourceTree = "<group>"; };
@@ -302,8 +302,8 @@
 				B7D9BD9326789A4F0063F572 /* GameConfig.h */,
 				B75FABAA265F8DA200D80312 /* HCSnakeDataManager.h */,
 				B75FABAB265F8DA200D80312 /* HCSnakeDataManager.m */,
-				B7190B262679D4E1007872CC /* HCMapDataManger.h */,
-				B7190B272679D4E1007872CC /* HCMapDataManger.m */,
+				B7190B262679D4E1007872CC /* HCMapDataManager.h */,
+				B7190B272679D4E1007872CC /* HCMapDataManager.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -573,7 +573,7 @@
 				B75FAA8C265CEA0F00D80312 /* HCGLTextureProgram.m in Sources */,
 				B75FABAF265F907D00D80312 /* HCGLColorNode.m in Sources */,
 				B7C3123F2664B84300F3F54A /* HCGLBgDrawer.m in Sources */,
-				B7190B282679D4E1007872CC /* HCMapDataManger.m in Sources */,
+				B7190B282679D4E1007872CC /* HCMapDataManager.m in Sources */,
 				B75FAB9D265DF6C100D80312 /* HCGLTextureDrawer.m in Sources */,
 				B717800C26806EC900121642 /* HCBaseRender.m in Sources */,
 				B7A52FB52600C8D200EF8BC2 /* HCGLKView02.m in Sources */,

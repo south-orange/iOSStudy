@@ -1,6 +1,6 @@
 //
 //
-//  HCMapDataManger.m
+//  HCMapDataManager.m
 //  OpenGLDemo
 //
 //  Created by 霍橙 on 2021/6/16.
@@ -8,12 +8,12 @@
 //
     
 
-#import "HCMapDataManger.h"
+#import "HCMapDataManager.h"
 #import "HCLinkList.h"
 #import "GameConfig.h"
 #import "HCMapNode.h"
 
-@interface HCMapDataManger ()
+@interface HCMapDataManager ()
 
 @property(nonatomic, assign) NSUInteger widthCellCount;
 @property(nonatomic, assign) NSUInteger heightCellCount;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation HCMapDataManger
+@implementation HCMapDataManager
 
 - (void)dealloc
 {

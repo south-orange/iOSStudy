@@ -11,7 +11,7 @@
 #import "HCGameSnake.h"
 #import "MathUtils.h"
 #import "GameConfig.h"
-#import "HCMapDataManger.h"
+#import "HCMapDataManager.h"
 
 @interface HCGameSnake ()
 
@@ -60,7 +60,7 @@ static NSInteger p_snakeId = 2;
     return snake;
 }
 
-- (void)setMapDataManager:(HCMapDataManger *)mapDataManager {
+- (void)setMapDataManager:(HCMapDataManager *)mapDataManager {
     _mapDataManager = mapDataManager;
     for (NSUInteger i = 0;i < self.length;i ++) {
         [mapDataManager addNode:self.bodyNodeArray[i]];
@@ -116,6 +116,7 @@ static NSInteger p_snakeId = 2;
 
 - (void)die {
     self.isDead = YES;
+    NSLog(@"die");
     for (NSUInteger i = 0;i < self.length;i ++) {
         [self.mapDataManager removeNode:self.bodyNodeArray[i]];
     }
@@ -170,8 +171,8 @@ static NSInteger p_snakeId = 2;
     return _bodySkin;
 }
 
-- (NSString *)snakeIdString {
-    return [NSString stringWithFormat:@"%ld", self.snakeId];
+- (NSNumber *)snakeIdObj {
+    return @(self.snakeId);
 }
 
 - (BOOL)isMySnake {

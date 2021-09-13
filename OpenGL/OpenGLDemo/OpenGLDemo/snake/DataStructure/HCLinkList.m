@@ -118,6 +118,15 @@
     self.nodeCount = 0;
 }
 
+- (void)removeAllNodesAfterNode:(HCLinkNode *)node {
+    HCLinkNode *removeNode = self.tail.prev;
+    while (removeNode != node) {
+        HCLinkNode *prevNode = removeNode.prev;
+        [self removeNode:removeNode];
+        removeNode = prevNode;
+    }
+}
+
 - (void)enumerateObjectsUsingBlock:(void (^)(HCLinkNode * _Nonnull, NSUInteger, BOOL * _Nonnull))block {
     BOOL stop = NO;
     NSUInteger index = 0;

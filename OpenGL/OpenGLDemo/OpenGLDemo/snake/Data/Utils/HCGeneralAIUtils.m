@@ -10,12 +10,12 @@
 
 #import "HCGeneralAIUtils.h"
 #import "HCGameSnake.h"
-#import "HCMapDataManger.h"
+#import "HCMapDataManager.h"
 #import "MathUtils.h"
 
 @implementation HCGeneralAIUtils
 
-+ (void)performAiSnake:(HCGameSnake *)snake mapManager:(HCMapDataManger *)mapManager mySnake:(HCGameSnake *)mySnake {
++ (void)performAiSnake:(HCGameSnake *)snake mapManager:(HCMapDataManager *)mapManager mySnake:(HCGameSnake *)mySnake {
     if (snake.isMySnake || snake.isDead) return;
     
     if ([self avoidWallWithSnake:snake mapManager:mapManager]) {
@@ -25,7 +25,7 @@
 }
 
 // 避免撞墙
-+ (BOOL)avoidWallWithSnake:(HCGameSnake *)snake mapManager:(HCMapDataManger *)mapManager {
++ (BOOL)avoidWallWithSnake:(HCGameSnake *)snake mapManager:(HCMapDataManager *)mapManager {
     CGFloat avoidDirection = -1;
     HCGLPoint center = snake.headNode.center;
     CGFloat borderCheckDistance = snake.aiLevel.borderCheckDistance;

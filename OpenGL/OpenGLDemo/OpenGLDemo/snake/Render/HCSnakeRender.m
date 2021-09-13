@@ -16,6 +16,8 @@
 
 @interface HCSnakeRender ()
 
+@property(nonatomic, strong) HCGLSnakeDrawer *snakeDrawer;
+
 @property(nonatomic, strong) HCGLTexture *headTexture;
 @property(nonatomic, strong) HCGLTexture *bodyTexture;
 
@@ -25,27 +27,52 @@
 
 @implementation HCSnakeRender
 
-- (void)render {
-    [self loadTexture];
-    HCLinkList *linkList = self.drawListWithBodyData;
-    [self.glkView.snakeDrawerManager updateDataWithKey:self.snake.snakeIdString dataList:linkList textureArray:self.textureArray];
+- (void)setSnake:(HCGameSnake *)snake {
+    if (_snake == nil) {
+        self.snakeDrawer = [HCGLSnakeDrawer.alloc initWithCapacity:10];
+        self.snakeDrawer.textureManager = self.glkView.textureManager;
+        [self.glkView.snakeDrawerManager.snakeDrawerDic setValue:self.snakeDrawer forKey:snake.snakeIdObj];
+    }
+    _snake = snake;
 }
 
-- (HCLinkList *)drawListWithBodyData {
-    HCLinkList *snakeDrawList = HCLinkList.new;
+- (void)render {
+    [self loadTexture];
+//    CGFloat start = CFAbsoluteTimeGetCurrent();
+    [self setupDrawerData];
+//    NSLog(@"cost 1 %lf", CFAbsoluteTimeGetCurrent() - start);
+//    NSLog(@"cost \n");
+}
+
+- (void)setupDrawerData {
+    self.snakeDrawer.textureArray = [NSMutableArray arrayWithArray:self.textureArray];
+    HCLinkNode *currentNode = self.snakeDrawer.linkList.headNode;
+    
     for (NSUInteger i = 0;i < self.snake.length;i += NODE_INDEX_INTERVAL + 1) {
         HCSnakeNode *bodyNode = self.snake.bodyNodeArray[i];
         HCGLTextureNode *drawBodyNode = [HCGLTextureNode.alloc initWithPosition:bodyNode.center size:HCGLSizeMake(self.snake.width * 2, self.snake.width * 2) direction:bodyNode.direction];
         drawBodyNode.texture = self.bodyTexture;
         [drawBodyNode calculateVertexArray];
-        [snakeDrawList addNode:[HCLinkNode nodeWithValue:drawBodyNode]];
+        if (currentNode.next == nil) {
+            currentNode = HCLinkNode.new;
+            [self.snakeDrawer.linkList addNode:currentNode];
+        }
+        currentNode.value = drawBodyNode;
+        currentNode = currentNode.next;
     }
     HCSnakeNode *headNode = self.snake.headNode;
     HCGLTextureNode *drawHeadNode = [HCGLTextureNode.alloc initWithPosition:headNode.center size:HCGLSizeMake(self.snake.width * 2, self.snake.width * 2) direction:self.snake.direction];
     drawHeadNode.texture = self.headTexture;
     [drawHeadNode calculateVertexArray];
-    [snakeDrawList addNode:[HCLinkNode nodeWithValue:drawHeadNode]];
-    return snakeDrawList;
+    if (currentNode.next == nil) {
+        currentNode = HCLinkNode.new;
+        [self.snakeDrawer.linkList addNode:currentNode];
+    }
+    currentNode.value = drawHeadNode;
+    currentNode = currentNode.next;
+    if (currentNode.next != nil) {
+        [self.snakeDrawer.linkList removeAllNodesAfterNode:currentNode.prev];
+    }
 }
 
 - (void)loadTexture {

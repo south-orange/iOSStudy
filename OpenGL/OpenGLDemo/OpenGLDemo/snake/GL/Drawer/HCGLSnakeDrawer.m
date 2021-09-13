@@ -28,26 +28,11 @@
     return self;
 }
 
-- (void)updateDataWithKey:(NSString *)key dataList:(HCLinkList *)dataList textureArray:(NSArray *)textureArray {
-    HCGLSnakeDrawer *drawer = self.snakeDrawerDic[key];
-    if (drawer == nil) {
-        drawer = [HCGLSnakeDrawer.alloc initWithCapacity:10];
-        drawer.textureManager = self.textureManager;
-        [self.snakeDrawerDic setValue:drawer forKey:key];
-    }
-    drawer.linkList = dataList;
-    drawer.textureArray = [NSMutableArray arrayWithArray:textureArray];
-}
-
-- (void)removeSnakeDrawerWithKey:(NSString *)key {
-    [self.snakeDrawerDic removeObjectForKey:key];
-}
-
 - (void)drawWithProgram:(HCGLTextureProgram *)program {
-    NSArray<NSString *> *sortedArray = [self.snakeDrawerDic.allKeys sortedArrayUsingComparator:^NSComparisonResult(NSString * obj1, NSString * obj2) {
+    NSArray<NSNumber *> *sortedArray = [self.snakeDrawerDic.allKeys sortedArrayUsingComparator:^NSComparisonResult(NSNumber * obj1, NSNumber * obj2) {
         return [obj1 integerValue] < [obj2 integerValue];
     }];
-    for (NSString *key in sortedArray) {
+    for (NSNumber *key in sortedArray) {
         [self.snakeDrawerDic[key] drawWithProgram:program];
     }
 }
