@@ -49,6 +49,8 @@ block要注意循环引用
 
 对象释放之后，会自动将对象置nil
 
+由于weak在置空时会加锁，所以是线程安全的
+
 ##### readwrite/readonly
 readwrite对外提供getter/setter方法，readonly对外只提供getter方法
 
